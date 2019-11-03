@@ -5,9 +5,9 @@ This repository is for testing, issues, collaboration for overwrite project on l
 https://github.com/ivoprogram/overwrite
 
 The objectives are to test the overwrite project, publish results, report issues. \
-The testing should be done on different file systems and operating systems.
+The testing should be done on different File Systems, Operating Systems, Hard Disk, SSD Disk, USB Stick, SD Card.
 
-The collaborators should upload directory with their user name, publish tests and results and report issues.
+The collaborators should upload folder with their user name, publish tests and results and report issues.
 
 
 
