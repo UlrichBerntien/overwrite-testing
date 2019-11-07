@@ -4,7 +4,11 @@
 # Test for special characters in Unix directory path
 # As reported in https://github.com/ivoprogram/overwrite-testing/issues/2
 
+
 DIR='/tmp/01test'
+
+echo
+uname -a
 
 echo
 echo "Creating directories"
