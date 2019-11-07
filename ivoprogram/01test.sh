@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Version 1.4.2 2019-11-07 overwrite.c
+# Test for special characters in Unix directory path
+# As reported in https://github.com/ivoprogram/overwrite-testing/issues/2
+
 DIR='/tmp/01test'
 
 echo
