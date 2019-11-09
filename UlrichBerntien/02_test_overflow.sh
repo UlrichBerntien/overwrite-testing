@@ -2,6 +2,8 @@
 
 if [[ ! -x ./overwrite ]]; then
     ./load_overwrite.sh
+    echo '[.] overwrite version'
+    ./overwrite --version
 fi
 
 echo '[.] Generate very long argument'
