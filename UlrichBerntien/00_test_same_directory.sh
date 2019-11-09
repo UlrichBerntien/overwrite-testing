@@ -9,6 +9,8 @@ if [[ $EUID != 0 ]]; then
 fi
 if [[ ! -x ./overwrite ]]; then
     ./load_overwrite.sh
+    echo '[.] overwrite version'
+    ./overwrite --version
 fi
 
 echo '[.] Create a small test drive'
@@ -38,10 +40,9 @@ sync -f $FS
 umount $FS
 
 echo '[.] check the metadata, read the directory block'
-hexdump -s 1536 -n 768 -C $RAW
-
 if grep 'RGNTHI' $RAW; then
     echo '[X] file name rest found on test drive!'
+    hexdump -s 1536 -n 768 -C $RAW
 else
     echo '[O] passed. No file name rest found'
 fi

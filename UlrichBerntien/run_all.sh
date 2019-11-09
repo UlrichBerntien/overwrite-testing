@@ -8,7 +8,10 @@ echo '[.] load and compile overwrite'
 for shf in ./??_*.sh
 do
     echo "[.] run test script $shf"
-    if [[ -x $shf ]]; then
-        ./$shf > ${shf/\.sh/.log} 2>&1
+    if [[ -x "$shf" ]]; then
+        "./$shf" > "${shf/\.sh/.log}" 2>&1
+        if [[ -a /tmp/testfs ]]; then
+            echo "[!] /tmp/testfs exists, no clean script exit"
+        fi
     fi
 done
