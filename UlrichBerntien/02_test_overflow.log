@@ -1,6 +1,9 @@
+[.] overwrite version
+
+Version 1.5 2019-11-09
 [.] Generate very long argument
 [.] run overwrite program with very long argument
 
-Writing directories: 
+Writing metadata: 
 Error 36, File name too long. 
 Error writing directories. 

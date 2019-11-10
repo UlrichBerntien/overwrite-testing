@@ -13,14 +13,14 @@ if [[ $EUID != 0 ]]; then
 fi
 if [[ ! -x ./overwrite ]]; then
     ./load_overwrite.sh
-    echo '[.] overwrite version'
-    ./overwrite --version
 fi
+echo '[.] overwrite version'
+./overwrite --version
 
 echo '[.] Create a small test drive'
 dd bs=1M count=2 if=/dev/zero "of=$RAW"
 echo '[.] Create ext4 file system and mount'
-mkfs.ext4 -j -q "$RAW"
+mkfs.ext4 -q "$RAW"
 mkdir "$FS"
 mount "$RAW" "$FS"
 
@@ -41,8 +41,8 @@ ls -al "$FS"
 echo '[.] run overwrite program'
 for name in "${UNIX_DIR_NAMES[@]}"
 do
-    echo "[.] call: ./overwrite -dirs:10 -path:$name"
-    $overwrite -dirs:10 "-path:$name"
+    echo "[.] call: ./overwrite -meta:10 -path:$name"
+    $overwrite -meta:10 "-path:$name"
 done
 
 cd

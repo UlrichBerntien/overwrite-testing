@@ -9,9 +9,9 @@ if [[ $EUID != 0 ]]; then
 fi
 if [[ ! -x ./overwrite ]]; then
     ./load_overwrite.sh
-    echo '[.] overwrite version'
-    ./overwrite --version
 fi
+echo '[.] overwrite version'
+./overwrite --version
 
 echo '[.] Create a small test drive'
 dd bs=1k count=256 if=/dev/zero "of=$RAW"
@@ -29,7 +29,7 @@ rm $FS/FRGNTHI0.TXT
 ls -al "$FS"
 
 echo '[.] run overwrite program'
-./overwrite -rand -block:512 -dirs:10 -data:10mb -path:$FS/
+./overwrite -rand -block:512 -meta:10 -data:10mb -path:$FS/
 
 echo '[.] unmount the test file system'
 sync -f "$FS"

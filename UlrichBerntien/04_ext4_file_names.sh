@@ -9,29 +9,31 @@ if [[ $EUID != 0 ]]; then
 fi
 if [[ ! -x ./overwrite ]]; then
     ./load_overwrite.sh
-    echo '[.] overwrite version'
-    ./overwrite --version
 fi
+echo '[.] overwrite version'
+./overwrite --version
 
 echo '[.] Create a small test drive'
 dd bs=1M count=1 if=/dev/zero "of=$RAW"
 echo '[.] Create ext4 file system and mount'
-mkfs.ext4 -j -q "$RAW"
+mkfs.ext4 -q "$RAW"
 mkdir "$FS"
 mount "$RAW" "$FS"
 
 echo '[.] Create test files'
 for i in $(seq 5)
 do
-    echo "content" > "$FS/Testfiles_${i}_______________________________________________________________________________________________________________________________________________________________________________________________________RaeQu3ho__"
+	testname="_${i}ööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööö_RaeQu3ho"
+	echo "[.] test file name length: ${#testname}"
+    echo "content" > "$FS/$testname"
 done
 ls -l "$FS"
 echo '[.] Delete all test files'
-rm $FS/Testfiles_*
+rm $FS/_*
 ls -l "$FS"
 
 echo '[.] run overwrite to overwrite 1000 dir entries and all data'
-./overwrite -dirs:1000 -data:all "-path:$FS"
+./overwrite -meta:1000 -data:all "-path:$FS"
 
 echo '[.] unmount the test file system'
 sync -f "$FS"

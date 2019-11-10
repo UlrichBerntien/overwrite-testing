@@ -9,9 +9,9 @@ if [[ $EUID != 0 ]]; then
 fi
 if [[ ! -x ./overwrite ]]; then
     ./load_overwrite.sh
-    echo '[.] overwrite version'
-    ./overwrite --version
 fi
+echo '[.] overwrite version'
+./overwrite --version
 
 echo '[.] Create a small test drive'
 dd bs=1k count=256 if=/dev/zero of=$RAW
@@ -30,10 +30,10 @@ echo '[.] delete the 10 test files'
 rm $FS/FRGNTHI*.txt
 ls -al $FS
 
-echo '[.] run overwrite program with -dirs:20 to overwrite 10 entries'
-# Differences between number in -dirs and number of overwrites is
+echo '[.] run overwrite program with -meta:20 to overwrite 10 entries'
+# Differences between number in -meta and number of overwrites is
 # in the documentation.
-./overwrite -dirs:20 -path:$FS/
+./overwrite -meta:20 -path:$FS/
 
 echo '[.] unmount the test file system'
 sync -f $FS

@@ -2,9 +2,9 @@
 
 if [[ ! -x ./overwrite ]]; then
     ./load_overwrite.sh
-    echo '[.] overwrite version'
-    ./overwrite --version
 fi
+echo '[.] overwrite version'
+./overwrite --version
 
 echo '[.] Generate very long argument'
 # current PATH_MAX is 4096 in Linux.
@@ -14,4 +14,4 @@ for i in $(seq 10); do
 done
 
 echo '[.] run overwrite program with very long argument'
-./overwrite -dirs:1 -path:$FLONG
+./overwrite -meta:1 -path:$FLONG
