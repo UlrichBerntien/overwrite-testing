@@ -1,0 +1,71 @@
+[.] overwrite version
+
+Version 1.5 2019-11-09
+[.] Create a small test drive
+2+0 records in
+2+0 records out
+2097152 bytes (2,1 MB, 2,0 MiB) copied, 0,000907763 s, 2,3 GB/s
+[.] Create ext4 file system and mount
+[.] Create test directories
+total 20
+dr-xr-xr-x 10 root root  1024 Nov 10 14:41 .
+drwxrwxrwt 14 root root   340 Nov 10 14:41 ..
+drwxr-x---  2 root root  1024 Nov 10 14:41 backslash\
+drwxr-x---  2 root root  1024 Nov 10 14:41 colon:
+drwx------  2 root root 12288 Nov 10 14:41 lost+found
+drwxr-x---  2 root root  1024 Nov 10 14:41 simple
+drwxr-x---  2 root root  1024 Nov 10 14:41  space
+drwxr-x---  2 root root  1024 Nov 10 14:41 spaceend 
+drwxr-x---  2 root root  1024 Nov 10 14:41 space in
+drwxr-x---  2 root root  1024 Nov 10 14:41 unicode̷
+[.] run overwrite program
+[.] call: ./overwrite -meta:10 -path:simple
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] call: ./overwrite -meta:10 -path:colon:
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] call: ./overwrite -meta:10 -path:backslash\
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] call: ./overwrite -meta:10 -path:unicode̷
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] call: ./overwrite -meta:10 -path: space
+
+Error, arguments contain space after : 
+[.] call: ./overwrite -meta:10 -path:spaceend 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] call: ./overwrite -meta:10 -path:space in
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] unmount the test file system
+[.] check the data on the test drive
+Binary file /tmp/RAWdata matches
+[X] file name rest found on test drive!
+[.] clean up

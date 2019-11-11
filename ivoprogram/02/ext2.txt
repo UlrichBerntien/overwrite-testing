@@ -1,0 +1,27 @@
+Discarding device blocks: 1024/4096         done                            
+Creating filesystem with 4096 1k blocks and 1024 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Writing superblocks and filesystem accounting information: 0/1   done
+
+
+# Before overwrite
+00025020  6c 6f 73 74 2b 66 6f 75  6e 64 00 00 0c 00 00 00  |lost+found......|
+00028820  5f 46 69 6c 65 2d 31 2e  74 78 74 00 0f 00 00 00  |_File-1.txt.....|
+00028830  14 00 0b 01 5f 46 69 6c  65 2d 32 2e 74 78 74 00  |...._File-2.txt.|
+00028840  10 00 00 00 14 00 0b 01  5f 46 69 6c 65 2d 33 2e  |........_File-3.|
+00028850  74 78 74 00 11 00 00 00  14 00 0b 01 5f 46 69 6c  |txt........._Fil|
+00028860  65 2d 34 2e 74 78 74 00  12 00 00 00 98 03 0b 01  |e-4.txt.........|
+00028870  5f 46 69 6c 65 2d 35 2e  74 78 74 00 00 00 00 00  |_File-5.txt.....|
+
+Writing metadata: 
+10% 20% 100% 
+
+Time: 00:00:00.0 
+Done. 
+
+# After overwrite
+00025020  6c 6f 73 74 2b 66 6f 75  6e 64 00 00 0c 00 00 00  |lost+found......|
+00028870  5f 46 69 6c 65 2d 35 2e  74 78 74 00 00 00 00 00  |_File-5.txt.....|
+
