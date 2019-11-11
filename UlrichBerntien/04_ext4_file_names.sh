@@ -15,32 +15,34 @@ echo '[.] overwrite version'
 
 echo '[.] Create a small test drive'
 dd bs=1M count=1 if=/dev/zero "of=$RAW"
-echo '[.] Create ext4 file system and mount'
+echo '[.] Create ext4 file system with out JOURNAL'
 mkfs.ext4 -q "$RAW"
+tune2fs -l "$RAW" | grep 'features'
 mkdir "$FS"
 mount "$RAW" "$FS"
 
 echo '[.] Create test files'
-for i in $(seq 5)
+for i in $(seq 9)
 do
-	testname="_${i}ööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööö_RaeQu3ho"
+	testname="∼∼$i∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼"
 	echo "[.] test file name length: ${#testname}"
     echo "content" > "$FS/$testname"
 done
 ls -l "$FS"
 echo '[.] Delete all test files'
-rm $FS/_*
+rm $FS/*∼Moh5za∼∼
 ls -l "$FS"
 
-echo '[.] run overwrite to overwrite 1000 dir entries and all data'
-./overwrite -meta:1000 -data:all "-path:$FS"
+OV_PARAMTERS=("-meta:9000" "-data:all" "-path:$FS")
+echo "[.] run overwrite with ${OV_PARAMTERS[@]}"
+./overwrite "${OV_PARAMTERS[@]}"
 
 echo '[.] unmount the test file system'
 sync -f "$FS"
 umount "$FS"
 
 echo '[.] check the data on the test drive'
-if grep 'RaeQu3ho' "$RAW"; then
+if grep -qF 'Moh5za' "$RAW"; then
     echo '[X] file name rest found on test drive!'
     hexdump -C "$RAW" 
 else

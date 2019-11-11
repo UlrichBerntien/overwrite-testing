@@ -21,11 +21,11 @@ mkdir "$FS"
 mount "$RAW" "$FS"
 
 echo '[.] Create 2 short name test files in the root directory'
-echo 'content' > $FS/FRGNTHI0.TXT
-echo 'content' > $FS/FRGNTHI1.TXT
+echo 'content' > $FS/1FIRST1.TXT
+echo 'content' > $FS/SECOND.TXT
 ls -al "$FS"
-echo '[.] delete the first test file'
-rm $FS/FRGNTHI0.TXT
+echo '[.] delete the first file only, NOT the second file'
+rm $FS/1FIRST1.TXT
 ls -al "$FS"
 
 echo '[.] run overwrite program'
@@ -36,9 +36,9 @@ sync -f "$FS"
 umount "$FS"
 
 echo '[.] check the metadata, read the directory block'
-if grep 'RGNTHI0' $RAW; then
-    echo '[X] file name rest found on test drive!'
-    hexdump -s 1536 -n 512 -C $RAW 
+if grep -qF 'FIRST' $RAW; then
+    echo '[X] file name rest of FIRST file found on test drive!'
+    hexdump -C $RAW 
 else
     echo '[O] passed. No file name rest found'
 fi
