@@ -13,7 +13,7 @@ https://github.com/ivoprogram/overwrite-testing/tree/master/UlrichBerntien
 
 This tests fail because the tests are not good, and not the overwrite program.
 
-I have created test scripts with different file systems that demonstrate that the overwrite program clean also metadata, demonstration on FAT, EXT2, EXT3, EXT3 also with long file names.
+I have created test scripts with different file systems that demonstrate that the overwrite program clean also metadata, demonstration on FAT, EXT2, EXT3, EXT4 also with long file names.
 
 01_test_short_names.sh
 Fail because at line 28 only one file is deleted and not also the second file, overwrite program does not overwrite existing files, only deleted.
