@@ -2,8 +2,7 @@
 
 Version 1.5 2019-11-09
 [.] Generate very long argument
+[.] argument lenth ${#FLONG} is above max PATH_MAX
 [.] run overwrite program with very long argument
-
-Writing metadata: 
-Error 36, File name too long. 
-Error writing directories. 
+Writing metadata: Error 36, File name too long. Error writing directories.
+[0] error message found, test passed
