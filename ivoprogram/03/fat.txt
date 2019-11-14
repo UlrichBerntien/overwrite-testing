@@ -1,0 +1,42 @@
+mkfs.fat 4.1 (2017-01-24)
+
+Overwrite Version 1.5.1 2019-11-14
+
+# Disk type
+/tmp/test/disk: DOS/MBR boot sector, code offset 0x3c+2, OEM-ID "mkfs.fat", sectors/cluster 4, root entries 512, sectors 8192 (volumes <=32 MB), Media descriptor 0xf8, sectors/FAT 6, sectors/track 32, heads 64, serial number 0xe7ded177, unlabeled, FAT (12 bit)
+
+# Before overwrite
+00082240  e5 23 00 46 00 69 00 6c  00 65 00 0f 00 b9 31 00  |.#.F.i.l.e....1.|
+00082250  23 00 00 00 ff ff ff ff  ff ff 00 00 ff ff ff ff  |#...............|
+00082260  e5 46 49 4c 45 31 23 20  20 20 20 20 00 64 86 a6  |.FILE1#     .d..|
+00082280  e5 23 00 46 00 69 00 6c  00 65 00 0f 00 e1 32 00  |.#.F.i.l.e....2.|
+00082290  23 00 00 00 ff ff ff ff  ff ff 00 00 ff ff ff ff  |#...............|
+000822a0  e5 46 49 4c 45 32 23 20  20 20 20 20 00 64 86 a6  |.FILE2#     .d..|
+000822c0  e5 23 00 46 00 69 00 6c  00 65 00 0f 00 e9 33 00  |.#.F.i.l.e....3.|
+000822d0  23 00 00 00 ff ff ff ff  ff ff 00 00 ff ff ff ff  |#...............|
+000822e0  e5 46 49 4c 45 33 23 20  20 20 20 20 00 64 86 a6  |.FILE3#     .d..|
+00082300  e5 23 00 46 00 69 00 6c  00 65 00 0f 00 b1 34 00  |.#.F.i.l.e....4.|
+00082310  23 00 00 00 ff ff ff ff  ff ff 00 00 ff ff ff ff  |#...............|
+00082320  e5 46 49 4c 45 34 23 20  20 20 20 20 00 64 86 a6  |.FILE4#     .d..|
+00082340  e5 23 00 46 00 69 00 6c  00 65 00 0f 00 d9 35 00  |.#.F.i.l.e....5.|
+00082350  23 00 00 00 ff ff ff ff  ff ff 00 00 ff ff ff ff  |#...............|
+00082360  e5 46 49 4c 45 35 23 20  20 20 20 20 00 64 86 a6  |.FILE5#     .d..|
+000b0400  23 43 6f 6e 74 65 6e 74  31 23 0a 00 00 00 00 00  |#Content1#......|
+000b0600  23 43 6f 6e 74 65 6e 74  32 23 0a 00 00 00 00 00  |#Content2#......|
+000b0800  23 43 6f 6e 74 65 6e 74  33 23 0a 00 00 00 00 00  |#Content3#......|
+000b0a00  23 43 6f 6e 74 65 6e 74  34 23 0a 00 00 00 00 00  |#Content4#......|
+000b0c00  23 43 6f 6e 74 65 6e 74  35 23 0a 00 00 00 00 00  |#Content5#......|
+
+Writing metadata: 
+10% 20% 30% 40% 100% 
+Writing data: 
+100% 
+
+Time: 00:00:00.385 
+Done. 
+
+# After overwrite
+00082340  e5 23 00 46 00 69 00 6c  00 65 00 0f 00 d9 35 00  |.#.F.i.l.e....5.|
+00082350  23 00 00 00 ff ff ff ff  ff ff 00 00 ff ff ff ff  |#...............|
+00082360  e5 46 49 4c 45 35 23 20  20 20 20 20 00 64 86 a6  |.FILE5#     .d..|
+
