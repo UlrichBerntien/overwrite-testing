@@ -26,16 +26,19 @@ Newer versins passes the test. All directory entries are overwritten.
 
 **01_test_short_names**
 
+The test uses the FAT file system.
+The test script creates 2 test files with short names and deletes the 2nd test file.
+The overwrite call should overwrite the metadata of the 1st test file.
+
 Overwrite ver1.2-2019-10-28 create files with long names.
 So the directory entry with short name inside the directory
 list was not overwritten.
-(FAT file system)
 
 Overwrite Version 1.3.1 2019-10-30 uses short directory names to
 overwrite entries. This works well.
 
-Overwrite Version 1.5 2019-11-09 uses longer names. The directory
-entry is not overwritten.
+The Test failed with overwrite Version 1.5 2019-11-09 and 1.5.1 2019-11-14.
+The first directory entry is not overwritten.
 
 **02_test_overflow**
 
@@ -46,6 +49,8 @@ causes a buffer overflow.
 Overwrite version 1.4.1 2019-11-03 handles also very long path names.
 An error message reports invalid names given as parameter.
 
+Overwrite version 1.5.1 2019-11-14 raises a memory segmentation fault.
+
 **03_test_unix_names**
 
 Overwrite version 1.4.1 2019-11-03 handles path names with ':' and
@@ -54,13 +59,16 @@ with '/' at the end of the path name.
 
 Newer versions handels path names with ':' and '/' at the end.
 
-Path names with a space as first character are not supported by
-the overwrite program.
+Overwrite passes the test if absolute path names are used to prevent
+a path name starting with a space.
 
 **04_ext4_file_names**
 
-Demonstrates that -meta:1000 is not enough to overwrite 5 directory
-entries in the ext4 file system with 98 character long file names.
+The test uses an ext4 file system with out journal on a small volume.
+The test creates 9 file, removes the files and calls overwrite.
+
+The overwrite version 1.5.1 2019-11-14 does not remove all parts of the
+file names from the volume.
 
 ## Support files
 
