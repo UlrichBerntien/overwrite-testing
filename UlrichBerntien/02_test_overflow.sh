@@ -13,10 +13,12 @@ for i in $(seq 10); do
     FLONG=$FLONG$FLONG
 done
 
-echo '[.] argument lenth ${#FLONG} is above max PATH_MAX'
+echo "[.] path argument lenth is ${#FLONG}"
 echo '[.] run overwrite program with very long argument'
+# First run to see the output
+./overwrite -meta:1 -path:$FLONG 2>&1
+# Second run to analyse the output
 MSG=$(./overwrite -meta:1 -path:$FLONG 2>&1)
-echo $MSG
 if [[ "$MSG" =~ 'Error' ]]; then
     echo '[0] error message found, test passed'
 else

@@ -17,7 +17,7 @@ echo '[.] Create a small test drive'
 dd bs=1M count=1 if=/dev/zero "of=$RAW"
 echo '[.] Create ext4 file system with out JOURNAL'
 mkfs.ext4 -q "$RAW"
-tune2fs -l "$RAW" | grep 'features'
+tune2fs -l "$RAW"
 mkdir "$FS"
 mount "$RAW" "$FS"
 
@@ -38,13 +38,12 @@ echo "[.] run overwrite with ${OV_PARAMTERS[@]}"
 ./overwrite "${OV_PARAMTERS[@]}"
 
 echo '[.] unmount the test file system'
-sync -f "$FS"
 umount "$FS"
 
 echo '[.] check the data on the test drive'
 if grep -qF 'Moh5za' "$RAW"; then
     echo '[X] file name rest found on test drive!'
-    hexdump -C "$RAW" 
+    hexdump -C -n 30000 "$RAW" 
 else
     echo '[O] passed. No file name rest found'
 fi

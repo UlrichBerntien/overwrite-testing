@@ -29,10 +29,9 @@ rm $FS/1FIRST1.TXT
 ls -al "$FS"
 
 echo '[.] run overwrite program'
-./overwrite -rand -block:512 -meta:10 -data:10mb -path:$FS/
+./overwrite -block:512 -meta:10 -data:10mb -path:$FS/
 
 echo '[.] unmount the test file system'
-sync -f "$FS"
 umount "$FS"
 
 echo '[.] check the metadata, read the directory block'
