@@ -13,4 +13,4 @@ The collaborators should upload folder with their user name, publish tests and r
 
 ![Overwrite](images/overwrite-windows-ui.png)
 ![Overwrite](images/overwrite-linux.png)
-![Overwrite](images/overwrite-unix.png)
+![Overwrite](images/overwrite-unix-ufs.png)
