@@ -1,0 +1,67 @@
+
+Overwrite Version 1.5.2 2019-11-16
+
+mkfs.fat 4.1 (2017-01-24)
+
+# Disk type
+/tmp/test/disk: DOS/MBR boot sector, code offset 0x3c+2, OEM-ID "mkfs.fat", sectors/cluster 4, root entries 512, sectors 8192 (volumes <=32 MB), Media descriptor 0xf8, sectors/FAT 6, sectors/track 32, heads 64, reserved 0x1, serial number 0xf4ea4ade, unlabeled, FAT (12 bit)
+
+total 8.0K
+drwxr-xr-x 2 root root 2.0K Nov 16 17:18 dir1
+drwxr-xr-x 2 root root 2.0K Nov 16 17:18 dir2
+-rwxr-xr-x 1 root root   11 Nov 16 17:18 File1File1File1File1File1File1File1File1File1File1File1File1File1File1File1File1File1File1
+-rwxr-xr-x 1 root root   11 Nov 16 17:18 File2
+total 6.0K
+drwxr-xr-x 2 root root 2.0K Nov 16 17:18 dir1
+drwxr-xr-x 2 root root 2.0K Nov 16 17:18 dir2
+-rwxr-xr-x 1 root root   11 Nov 16 17:18 File2
+
+# Before overwrite
+00000050  5e eb f0 32 e4 cd 16 cd  19 eb fe 54 68 69 73 20  |^..2.......This |
+00000060  69 73 20 6e 6f 74 20 61  20 62 6f 6f 74 61 62 6c  |is not a bootabl|
+00000070  65 20 64 69 73 6b 2e 20  20 50 6c 65 61 73 65 20  |e disk.  Please |
+00000080  69 6e 73 65 72 74 20 61  20 62 6f 6f 74 61 62 6c  |insert a bootabl|
+000000b0  72 79 20 61 67 61 69 6e  20 2e 2e 2e 20 0d 0a 00  |ry again ... ...|
+00001a00  41 64 00 69 00 72 00 31  00 00 00 0f 00 a8 ff ff  |Ad.i.r.1........|
+00001a20  44 49 52 31 20 20 20 20  20 20 20 10 00 00 43 8a  |DIR1       ...C.|
+00001a40  41 64 00 69 00 72 00 32  00 00 00 0f 00 aa ff ff  |Ad.i.r.2........|
+00001a60  44 49 52 32 20 20 20 20  20 20 20 10 00 00 43 8a  |DIR2       ...C.|
+00001a80  e5 65 00 31 00 46 00 69  00 6c 00 0f 00 4a 65 00  |.e.1.F.i.l...Je.|
+00001a90  31 00 46 00 69 00 6c 00  65 00 00 00 31 00 00 00  |1.F.i.l.e...1...|
+00001aa0  e5 46 00 69 00 6c 00 65  00 31 00 0f 00 4a 46 00  |.F.i.l.e.1...JF.|
+00001ab0  69 00 6c 00 65 00 31 00  46 00 00 00 69 00 6c 00  |i.l.e.1.F...i.l.|
+00001ac0  e5 6c 00 65 00 31 00 46  00 69 00 0f 00 4a 6c 00  |.l.e.1.F.i...Jl.|
+00001ad0  65 00 31 00 46 00 69 00  6c 00 00 00 65 00 31 00  |e.1.F.i.l...e.1.|
+00001ae0  e5 31 00 46 00 69 00 6c  00 65 00 0f 00 4a 31 00  |.1.F.i.l.e...J1.|
+00001af0  46 00 69 00 6c 00 65 00  31 00 00 00 46 00 69 00  |F.i.l.e.1...F.i.|
+00001b00  e5 69 00 6c 00 65 00 31  00 46 00 0f 00 4a 69 00  |.i.l.e.1.F...Ji.|
+00001b10  6c 00 65 00 31 00 46 00  69 00 00 00 6c 00 65 00  |l.e.1.F.i...l.e.|
+00001b20  e5 65 00 31 00 46 00 69  00 6c 00 0f 00 4a 65 00  |.e.1.F.i.l...Je.|
+00001b30  31 00 46 00 69 00 6c 00  65 00 00 00 31 00 46 00  |1.F.i.l.e...1.F.|
+00001b40  e5 46 00 69 00 6c 00 65  00 31 00 0f 00 4a 46 00  |.F.i.l.e.1...JF.|
+00001b50  69 00 6c 00 65 00 31 00  46 00 00 00 69 00 6c 00  |i.l.e.1.F...i.l.|
+00001b60  e5 49 4c 45 31 46 7e 31  20 20 20 20 00 00 43 8a  |.ILE1F~1    ..C.|
+00001b80  41 46 00 69 00 6c 00 65  00 32 00 0f 00 14 00 00  |AF.i.l.e.2......|
+00001ba0  46 49 4c 45 32 20 20 20  20 20 20 20 00 00 43 8a  |FILE2       ..C.|
+
+Writing metadata: 
+10% 20% 30% 40% 50% 100% 
+Writing data: 
+10% 20% 30% 40% 50% 60% 70% 80% 100% 
+
+Time: 00:00:00.32 
+Done. 
+
+# After overwrite
+00000050  5e eb f0 32 e4 cd 16 cd  19 eb fe 54 68 69 73 20  |^..2.......This |
+00000060  69 73 20 6e 6f 74 20 61  20 62 6f 6f 74 61 62 6c  |is not a bootabl|
+00000070  65 20 64 69 73 6b 2e 20  20 50 6c 65 61 73 65 20  |e disk.  Please |
+00000080  69 6e 73 65 72 74 20 61  20 62 6f 6f 74 61 62 6c  |insert a bootabl|
+000000b0  72 79 20 61 67 61 69 6e  20 2e 2e 2e 20 0d 0a 00  |ry again ... ...|
+00001a00  41 64 00 69 00 72 00 31  00 00 00 0f 00 a8 ff ff  |Ad.i.r.1........|
+00001a20  44 49 52 31 20 20 20 20  20 20 20 10 00 00 43 8a  |DIR1       ...C.|
+00001a40  41 64 00 69 00 72 00 32  00 00 00 0f 00 aa ff ff  |Ad.i.r.2........|
+00001a60  44 49 52 32 20 20 20 20  20 20 20 10 00 00 43 8a  |DIR2       ...C.|
+00001b80  41 46 00 69 00 6c 00 65  00 32 00 0f 00 14 00 00  |AF.i.l.e.2......|
+00001ba0  46 49 4c 45 32 20 20 20  20 20 20 20 00 00 43 8a  |FILE2       ..C.|
+

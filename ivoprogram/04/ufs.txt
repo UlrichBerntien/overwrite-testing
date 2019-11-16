@@ -1,0 +1,29 @@
+
+Overwrite Version 1.5.2 2019-11-16
+
+# Disk type
+/tmp/test/disk: Unix Fast File system [v2] (little-endian) last mounted on /tmp/test/mnt, last written at Sat Nov 16 18:36:52 2019, clean flag 0, readonly flag 0, number of blocks 1024, number of data blocks 871, number of cylinder groups 4, block size 32768, fragment size 4096, average file size 16384, average number of files in dir 64, pending blocks to free 0, pending inodes to free 0, system-wide uuid 0, minimum percentage of free blocks 8, TIME optimization
+
+
+# Before overwrite
+00140020  46 69 6c 65 31 2d 2d 00  02 01 00 00 10 00 08 07  |File1--.........|
+00140030  46 69 6c 65 32 2d 2d 00  03 01 00 00 10 00 08 07  |File2--.........|
+00140040  46 69 6c 65 33 2d 2d 00  04 01 00 00 10 00 08 07  |File3--.........|
+00140050  46 69 6c 65 34 2d 2d 00  05 01 00 00 a8 01 08 07  |File4--.........|
+00140060  46 69 6c 65 35 2d 2d 00  00 00 00 00 00 00 00 00  |File5--.........|
+00141000  43 6f 6e 74 65 6e 74 31  2d 2d 0a 00 00 00 00 00  |Content1--......|
+00142000  43 6f 6e 74 65 6e 74 32  2d 2d 0a 00 00 00 00 00  |Content2--......|
+00143000  43 6f 6e 74 65 6e 74 33  2d 2d 0a 00 00 00 00 00  |Content3--......|
+00144000  43 6f 6e 74 65 6e 74 34  2d 2d 0a 00 00 00 00 00  |Content4--......|
+00145000  43 6f 6e 74 65 6e 74 35  2d 2d 0a 00 00 00 00 00  |Content5--......|
+
+Writing metadata: 
+10% 20% 30% 40% 100% 
+
+Time: 00:00:00.0 
+Done. 
+
+# After overwrite
+00140060  46 69 6c 65 35 2d 2d 00  00 00 00 00 00 00 00 00  |File5--.........|
+00145000  43 6f 6e 74 65 6e 74 35  2d 2d 0a 00 00 00 00 00  |Content5--......|
+
