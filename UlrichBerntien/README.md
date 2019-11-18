@@ -85,6 +85,21 @@ On the ext4 file system without journal overwrite must call with -meta:5000
 to overwrite the 9 test file names. (A call with parameter -meta:4000 is not
 sufficient to overwrite all test file names.)
 
+**05_random_names**
+
+In this test case a directory is created. In the directory 140 files are created.
+All file names are 10 character long.
+
+From this 140 files 8 files are deleted. The names of the 8 files were prepared
+with a string 'MA4RK' inside the 10 character long file name.
+
+The overwrite program with options -meta:9999 -data:all is called to overwrite
+the 8 deleted files with 9999 metadata entries.
+
+Overwrite version 1.5.2 does overwrite all names in the FAT file system but not
+in the ext3, ext4 with out journal and NTFS. Rest of the deleted files names
+are readable after the overwrite call.
+
 ## Support files
 
 **load_overwrite.sh**
