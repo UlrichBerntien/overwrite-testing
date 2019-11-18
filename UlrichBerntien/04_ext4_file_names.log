@@ -1,56 +1,137 @@
 [.] overwrite version
-
-Overwrite Version 1.5.1 2019-11-14
+Overwrite Version 1.5.2 2019-11-16
 [.] Create a small test drive
-1+0 records in
-1+0 records out
-1048576 bytes (1,0 MB, 1,0 MiB) copied, 0,00106061 s, 989 MB/s
-[.] Create ext4 file system with out JOURNAL
+24+0 records in
+24+0 records out
+25165824 bytes (25 MB, 24 MiB) copied, 0,00868135 s, 2,9 GB/s
+[.] Create fat file system and mount
+mkfs.fat 4.1 (2017-01-24)
+[.] Create test files
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+total 18
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼1∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼2∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼3∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼4∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼5∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼6∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼7∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼8∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼9∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+[.] Delete all test files
+total 0
+[.] run overwrite -meta:70 -data:all -path:/tmp/testfs
 
-Filesystem too small for a journal
-tune2fs 1.44.1 (24-Mar-2018)
-Filesystem volume name:   <none>
-Last mounted on:          <not available>
-Filesystem UUID:          d50f1cd4-ddab-4c28-8f0d-f276b073ff09
-Filesystem magic number:  0xEF53
-Filesystem revision #:    1 (dynamic)
-Filesystem features:      ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
-Filesystem flags:         signed_directory_hash 
-Default mount options:    user_xattr acl
-Filesystem state:         clean
-Errors behavior:          Continue
-Filesystem OS type:       Linux
-Inode count:              128
-Block count:              1024
-Reserved block count:     51
-Free blocks:              982
-Free inodes:              117
-First block:              1
-Block size:               1024
-Fragment size:            1024
-Group descriptor size:    64
-Reserved GDT blocks:      7
-Blocks per group:         8192
-Fragments per group:      8192
-Inodes per group:         128
-Inode blocks per group:   16
-Flex block group size:    16
-Filesystem created:       Fri Nov 15 07:26:45 2019
-Last mount time:          n/a
-Last write time:          Fri Nov 15 07:26:45 2019
-Mount count:              0
-Maximum mount count:      -1
-Last checked:             Fri Nov 15 07:26:45 2019
-Check interval:           0 (<none>)
-Lifetime writes:          26 kB
-Reserved blocks uid:      0 (user root)
-Reserved blocks gid:      0 (group root)
-First inode:              11
-Inode size:	          128
-Default directory hash:   half_md4
-Directory Hash Seed:      94a4b8a3-ee95-42df-bd69-cb14d0cea60b
-Checksum type:            crc32c
-Checksum:                 0xcdc88611
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+Writing data: 
+100% 
+
+Time: 00:00:00.61 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+24+0 records in
+24+0 records out
+25165824 bytes (25 MB, 24 MiB) copied, 0,0120165 s, 2,1 GB/s
+[.] Create exfat file system and mount
+mkexfatfs 1.2.8
+Creating... done.
+Flushing... done.
+File system created successfully.
+[.] Create test files
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+total 36
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼1∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼2∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼3∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼4∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼5∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼6∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼7∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼8∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼9∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+[.] Delete all test files
+total 0
+[.] run overwrite -meta:70 -data:all -path:/tmp/testfs
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+Writing data: 
+100% 
+
+Time: 00:00:00.50 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+24+0 records in
+24+0 records out
+25165824 bytes (25 MB, 24 MiB) copied, 0,0069619 s, 3,6 GB/s
+[.] Create vfat file system and mount
+mkfs.fat 4.1 (2017-01-24)
+[.] Create test files
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+total 18
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼1∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼2∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼3∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼4∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼5∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼6∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼7∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼8∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxr-x--- 1 root root 8 Nov 18 19:22 ∼∼9∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+[.] Delete all test files
+total 0
+[.] run overwrite -meta:70 -data:all -path:/tmp/testfs
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+Writing data: 
+100% 
+
+Time: 00:00:00.61 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+24+0 records in
+24+0 records out
+25165824 bytes (25 MB, 24 MiB) copied, 0,00831974 s, 3,0 GB/s
+[.] Create ext2 file system and mount
+Filesystem features:      ext_attr resize_inode dir_index filetype sparse_super large_file
 [.] Create test files
 [.] test file name length: 46
 [.] test file name length: 46
@@ -62,308 +143,120 @@ Checksum:                 0xcdc88611
 [.] test file name length: 46
 [.] test file name length: 46
 total 21
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼1∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼2∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼3∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼4∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼5∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼6∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼7∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼8∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
--rw-r----- 1 root root     8 Nov 15 07:26 ∼∼9∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
-drwx------ 2 root root 12288 Nov 15 07:26 lost+found
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼1∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼2∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼3∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼4∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼5∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼6∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼7∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼8∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼9∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+drwx------ 2 root root 12288 Nov 18 19:22 lost+found
 [.] Delete all test files
 total 12
-drwx------ 2 root root 12288 Nov 15 07:26 lost+found
-[.] run overwrite with -meta:9000 -data:all -path:/tmp/testfs
+drwx------ 2 root root 12288 Nov 18 19:22 lost+found
+[.] run overwrite -meta:70 -data:all -path:/tmp/testfs
 
 Writing metadata: 
-Error 28, No space left on device. 
-Error writing files. 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 Writing data: 
 100% 
 
-Time: 00:00:00.19 
+Time: 00:00:00.72 
 Done. 
 [.] unmount the test file system
-[.] check the data on the test drive
-[X] file name rest found on test drive!
-00000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00000400  80 00 00 00 00 04 00 00  33 00 00 00 d4 03 00 00  |........3.......|
-00000410  75 00 00 00 01 00 00 00  00 00 00 00 00 00 00 00  |u...............|
-00000420  00 20 00 00 00 20 00 00  80 00 00 00 25 45 ce 5d  |. ... ......%E.]|
-00000430  25 45 ce 5d 01 00 ff ff  53 ef 01 00 01 00 00 00  |%E.]....S.......|
-00000440  25 45 ce 5d 00 00 00 00  00 00 00 00 01 00 00 00  |%E.]............|
-00000450  00 00 00 00 0b 00 00 00  80 00 00 00 38 00 00 00  |............8...|
-00000460  c2 02 00 00 6b 04 00 00  d5 0f 1c d4 dd ab 4c 28  |....k.........L(|
-00000470  8f 0d f2 76 b0 73 ff 09  00 00 00 00 00 00 00 00  |...v.s..........|
-00000480  00 00 00 00 00 00 00 00  2f 74 6d 70 2f 74 65 73  |......../tmp/tes|
-00000490  74 66 73 00 00 00 00 00  00 00 00 00 00 00 00 00  |tfs.............|
-000004a0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000004c0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 07 00  |................|
-000004d0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-000004e0  00 00 00 00 00 00 00 00  00 00 00 00 94 a4 b8 a3  |................|
-000004f0  ee 95 42 df bd 69 cb 14  d0 ce a6 0b 01 00 40 00  |..B..i........@.|
-00000500  0c 00 00 00 00 00 00 00  25 45 ce 5d 00 00 00 00  |........%E.]....|
-00000510  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00000560  01 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-00000570  00 00 00 00 04 01 00 00  2a 07 00 00 00 00 00 00  |........*.......|
-00000580  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000007f0  00 00 00 00 00 00 00 00  00 00 00 00 a3 d7 d1 a0  |................|
-00000800  0a 00 00 00 1a 00 00 00  2a 00 00 00 d4 03 75 00  |........*.....u.|
-00000810  02 00 04 00 00 00 00 00  f1 91 16 02 00 00 81 c6  |................|
-00000820  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-00000830  00 00 00 00 00 00 00 00  ff b2 65 4f 00 00 00 00  |..........eO....|
-00000840  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00002800  ff ff ff 07 00 fe ff 01  00 00 00 00 00 00 00 00  |................|
-00002810  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00002870  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 80  |................|
-00002880  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
-*
-00002c00  02 00 00 00 0c 00 01 02  2e 00 00 00 02 00 00 00  |................|
-00002c10  f4 03 02 02 2e 2e 00 00  00 00 00 00 01 08 00 00  |................|
-00002c20  7b 00 02 00 01 00 00 00  9a 83 01 66 02 00 00 00  |{..........f....|
-00002c30  6c 00 61 01 e2 88 bc e2  88 bc 31 e2 88 bc e2 88  |l.a.......1.....|
-00002c40  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-00002c50  9a d0 b5 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |................|
-00002c60  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-00002c70  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-00002c80  9a d0 b5 e2 88 bc e2 88  bc 4d 6f 68 35 7a 61 e2  |.........Moh5za.|
-00002c90  88 bc e2 88 bc 00 00 00  0d 00 00 00 6c 00 61 01  |............l.a.|
-00002ca0  e2 88 bc e2 88 bc 32 e2  88 bc e2 88 bc d1 82 d0  |......2.........|
-00002cb0  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00002cc0  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00002cd0  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc d1 82 d0  |................|
-00002ce0  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00002cf0  88 bc e2 88 bc 4d 6f 68  35 7a 61 e2 88 bc e2 88  |.....Moh5za.....|
-00002d00  bc 00 00 00 0e 00 00 00  6c 00 61 01 e2 88 bc e2  |........l.a.....|
-00002d10  88 bc 33 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |..3.............|
-00002d20  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-00002d30  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-00002d40  9a d0 b5 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |................|
-00002d50  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-00002d60  bc 4d 6f 68 35 7a 61 e2  88 bc e2 88 bc 00 00 00  |.Moh5za.........|
-00002d70  0f 00 00 00 6c 00 61 01  e2 88 bc e2 88 bc 34 e2  |....l.a.......4.|
-00002d80  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00002d90  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc d1 82 d0  |................|
-00002da0  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00002db0  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00002dc0  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc 4d 6f 68  |.............Moh|
-00002dd0  35 7a 61 e2 88 bc e2 88  bc 00 00 00 10 00 00 00  |5za.............|
-00002de0  6c 00 61 01 e2 88 bc e2  88 bc 35 e2 88 bc e2 88  |l.a.......5.....|
-00002df0  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-00002e00  9a d0 b5 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |................|
-00002e10  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-00002e20  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-00002e30  9a d0 b5 e2 88 bc e2 88  bc 4d 6f 68 35 7a 61 e2  |.........Moh5za.|
-00002e40  88 bc e2 88 bc 00 00 00  11 00 00 00 6c 00 61 01  |............l.a.|
-00002e50  e2 88 bc e2 88 bc 36 e2  88 bc e2 88 bc d1 82 d0  |......6.........|
-00002e60  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00002e70  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00002e80  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc d1 82 d0  |................|
-00002e90  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00002ea0  88 bc e2 88 bc 4d 6f 68  35 7a 61 e2 88 bc e2 88  |.....Moh5za.....|
-00002eb0  bc 00 00 00 12 00 00 00  6c 00 61 01 e2 88 bc e2  |........l.a.....|
-00002ec0  88 bc 37 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |..7.............|
-00002ed0  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-00002ee0  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-00002ef0  9a d0 b5 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |................|
-00002f00  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-00002f10  bc 4d 6f 68 35 7a 61 e2  88 bc e2 88 bc 00 00 00  |.Moh5za.........|
-00002f20  13 00 00 00 d4 00 61 01  e2 88 bc e2 88 bc 38 e2  |......a.......8.|
-00002f30  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00002f40  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc d1 82 d0  |................|
-00002f50  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00002f60  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00002f70  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc 4d 6f 68  |.............Moh|
-00002f80  35 7a 61 e2 88 bc e2 88  bc 00 00 00 00 00 00 00  |5za.............|
-00002f90  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00002ff0  00 00 00 00 00 00 00 00  0c 00 00 de 48 c8 30 56  |............H.0V|
-00003000  0b 00 00 00 0c 00 01 02  2e 00 00 00 02 00 00 00  |................|
-00003010  e8 03 02 02 2e 2e 00 00  00 00 00 00 00 00 00 00  |................|
-00003020  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000033f0  00 00 00 00 00 00 00 00  0c 00 00 de cc 22 9b db  |............."..|
-00003400  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00003410  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000037f0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00003800  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00003810  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00003bf0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00003c00  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00003c10  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00003ff0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00004000  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00004010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000043f0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00004400  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00004410  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000047f0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00004800  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00004810  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00004bf0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00004c00  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00004c10  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00004ff0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00005000  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00005010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000053f0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00005400  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00005410  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000057f0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00005800  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00005810  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00005bf0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00005c00  00 00 00 00 f4 03 00 00  00 00 00 00 00 00 00 00  |................|
-00005c10  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00005ff0  00 00 00 00 00 00 00 00  0c 00 00 de b2 13 4e 2f  |..............N/|
-00006000  00 00 00 00 f4 03 03 01  30 78 2d e2 12 00 00 00  |........0x-.....|
-00006010  0c 00 03 01 37 78 2d d0  13 00 00 00 0c 00 03 01  |....7x-.........|
-00006020  38 78 2d d1 15 00 00 00  0c 00 04 01 31 30 78 2d  |8x-.........10x-|
-00006030  17 00 00 00 0c 00 04 01  31 32 78 2d 1d 00 00 00  |........12x-....|
-00006040  0c 00 04 01 31 38 78 2d  22 00 00 00 0c 00 04 01  |....18x-".......|
-00006050  32 33 78 2d 24 00 00 00  0c 00 04 01 32 35 78 2d  |23x-$.......25x-|
-00006060  27 00 00 00 0c 00 04 01  32 38 78 2d 2a 00 00 00  |'.......28x-*...|
-00006070  0c 00 04 01 33 31 78 2d  2c 00 00 00 0c 00 04 01  |....31x-,.......|
-00006080  33 33 78 2d 2e 00 00 00  0c 00 04 01 33 35 78 2d  |33x-........35x-|
-00006090  2f 00 00 00 0c 00 04 01  33 36 78 2d 33 00 00 00  |/.......36x-3...|
-000060a0  0c 00 04 01 34 30 78 2d  35 00 00 00 0c 00 04 01  |....40x-5.......|
-000060b0  34 32 78 2d 36 00 00 00  0c 00 04 01 34 33 78 2d  |42x-6.......43x-|
-000060c0  3c 00 00 00 0c 00 04 01  34 39 78 2d 3d 00 00 00  |<.......49x-=...|
-000060d0  0c 00 04 01 35 30 78 2d  40 00 00 00 0c 00 04 01  |....50x-@.......|
-000060e0  35 33 78 2d 42 00 00 00  0c 00 04 01 35 35 78 2d  |53x-B.......55x-|
-000060f0  43 00 00 00 0c 00 04 01  35 36 78 2d 45 00 00 00  |C.......56x-E...|
-00006100  0c 00 04 01 35 38 78 2d  48 00 00 00 0c 00 04 01  |....58x-H.......|
-00006110  36 31 78 2d 4c 00 00 00  0c 00 04 01 36 35 78 2d  |61x-L.......65x-|
-00006120  4d 00 00 00 0c 00 04 01  36 36 78 2d 4f 00 00 00  |M.......66x-O...|
-00006130  0c 00 04 01 36 38 78 2d  50 00 00 00 0c 00 04 01  |....68x-P.......|
-00006140  36 39 78 2d 51 00 00 00  0c 00 04 01 37 30 78 2d  |69x-Q.......70x-|
-00006150  53 00 00 00 0c 00 04 01  37 32 78 2d 54 00 00 00  |S.......72x-T...|
-00006160  0c 00 04 01 37 33 78 2d  5c 00 00 00 0c 00 04 01  |....73x-\.......|
-00006170  38 31 78 2d 63 00 00 00  0c 00 04 01 38 38 78 2d  |81x-c.......88x-|
-00006180  66 00 00 00 0c 00 04 01  39 31 78 2d 67 00 00 00  |f.......91x-g...|
-00006190  0c 00 04 01 39 32 78 2d  68 00 00 00 0c 00 04 01  |....92x-h.......|
-000061a0  39 33 78 2d 71 00 00 00  10 00 05 01 31 30 32 78  |93x-q.......102x|
-000061b0  2d bc e2 88 74 00 00 00  10 00 05 01 31 30 35 78  |-...t.......105x|
-000061c0  2d 00 00 00 79 00 00 00  10 00 05 01 31 31 30 78  |-...y.......110x|
-000061d0  2d bc 35 e2 7c 00 00 00  10 00 05 01 31 31 33 78  |-.5.|.......113x|
-000061e0  2d d0 b8 d1 7d 00 00 00  10 00 05 01 31 31 34 78  |-...}.......114x|
-000061f0  2d d1 82 d0 7f 00 00 00  00 02 05 01 31 31 36 78  |-...........116x|
-00006200  2d d0 b5 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |-...............|
-00006210  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-00006220  bc 4d 6f 68 35 7a 61 e2  88 bc e2 88 bc 00 00 00  |.Moh5za.........|
-00006230  00 00 00 00 6c 00 61 01  e2 88 bc e2 88 bc 36 e2  |....l.a.......6.|
-00006240  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00006250  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc d1 82 d0  |................|
-00006260  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00006270  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00006280  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc 4d 6f 68  |.............Moh|
-00006290  35 7a 61 e2 88 bc e2 88  bc 00 00 00 00 00 00 00  |5za.............|
-000062a0  6c 00 61 01 e2 88 bc e2  88 bc 37 e2 88 bc e2 88  |l.a.......7.....|
-000062b0  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-000062c0  9a d0 b5 e2 88 bc e2 88  bc d1 82 d0 b5 d1 81 d1  |................|
-000062d0  82 d0 b8 d1 80 d0 b0 d1  9a d0 b5 e2 88 bc e2 88  |................|
-000062e0  bc d1 82 d0 b5 d1 81 d1  82 d0 b8 d1 80 d0 b0 d1  |................|
-000062f0  9a d0 b5 e2 88 bc e2 88  bc 4d 6f 68 35 7a 61 e2  |.........Moh5za.|
-00006300  88 bc e2 88 bc 00 00 00  13 00 00 00 ec 00 61 01  |..............a.|
-00006310  e2 88 bc e2 88 bc 38 e2  88 bc e2 88 bc d1 82 d0  |......8.........|
-00006320  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00006330  88 bc e2 88 bc d1 82 d0  b5 d1 81 d1 82 d0 b8 d1  |................|
-00006340  80 d0 b0 d1 9a d0 b5 e2  88 bc e2 88 bc d1 82 d0  |................|
-00006350  b5 d1 81 d1 82 d0 b8 d1  80 d0 b0 d1 9a d0 b5 e2  |................|
-00006360  88 bc e2 88 bc 4d 6f 68  35 7a 61 e2 88 bc e2 88  |.....Moh5za.....|
-00006370  bc 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-00006380  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-000063f0  00 00 00 00 00 00 00 00  0c 00 00 de 30 40 16 b7  |............0@..|
-00006400  00 00 00 00 44 01 05 01  31 31 38 78 2d 00 00 00  |....D...118x-...|
-00006410  0c 00 03 01 32 78 2d d0  0e 00 00 00 0c 00 03 01  |....2x-.........|
-00006420  33 78 2d d1 0f 00 00 00  0c 00 03 01 34 78 2d d0  |3x-.........4x-.|
-00006430  11 00 00 00 0c 00 03 01  36 78 2d d1 14 00 00 00  |........6x-.....|
-00006440  0c 00 03 01 39 78 2d d0  16 00 00 00 0c 00 04 01  |....9x-.........|
-00006450  31 31 78 2d 18 00 00 00  0c 00 04 01 31 33 78 2d  |11x-........13x-|
-00006460  19 00 00 00 0c 00 04 01  31 34 78 2d 1a 00 00 00  |........14x-....|
-00006470  0c 00 04 01 31 35 78 2d  1b 00 00 00 0c 00 04 01  |....15x-........|
-00006480  31 36 78 2d 1c 00 00 00  0c 00 04 01 31 37 78 2d  |16x-........17x-|
-00006490  1e 00 00 00 0c 00 04 01  31 39 78 2d 1f 00 00 00  |........19x-....|
-000064a0  0c 00 04 01 32 30 78 2d  20 00 00 00 0c 00 04 01  |....20x- .......|
-000064b0  32 31 78 2d 21 00 00 00  0c 00 04 01 32 32 78 2d  |21x-!.......22x-|
-000064c0  23 00 00 00 0c 00 04 01  32 34 78 2d 25 00 00 00  |#.......24x-%...|
-000064d0  0c 00 04 01 32 36 78 2d  26 00 00 00 0c 00 04 01  |....26x-&.......|
-000064e0  32 37 78 2d 28 00 00 00  0c 00 04 01 32 39 78 2d  |27x-(.......29x-|
-000064f0  29 00 00 00 0c 00 04 01  33 30 78 2d 2b 00 00 00  |).......30x-+...|
-00006500  0c 00 04 01 33 32 78 2d  2d 00 00 00 0c 00 04 01  |....32x--.......|
-00006510  33 34 78 2d 30 00 00 00  0c 00 04 01 33 37 78 2d  |34x-0.......37x-|
-00006520  31 00 00 00 0c 00 04 01  33 38 78 2d 32 00 00 00  |1.......38x-2...|
-00006530  0c 00 04 01 33 39 78 2d  34 00 00 00 0c 00 04 01  |....39x-4.......|
-00006540  34 31 78 2d 0b 00 00 00  b0 02 0a 02 6c 6f 73 74  |41x-........lost|
-00006550  2b 66 6f 75 6e 64 00 00  37 00 00 00 0c 00 04 01  |+found..7.......|
-00006560  34 34 78 2d 38 00 00 00  0c 00 04 01 34 35 78 2d  |44x-8.......45x-|
-00006570  39 00 00 00 0c 00 04 01  34 36 78 2d 3a 00 00 00  |9.......46x-:...|
-00006580  0c 00 04 01 34 37 78 2d  3b 00 00 00 0c 00 04 01  |....47x-;.......|
-00006590  34 38 78 2d 3e 00 00 00  0c 00 04 01 35 31 78 2d  |48x->.......51x-|
-000065a0  3f 00 00 00 0c 00 04 01  35 32 78 2d 41 00 00 00  |?.......52x-A...|
-000065b0  0c 00 04 01 35 34 78 2d  44 00 00 00 0c 00 04 01  |....54x-D.......|
-000065c0  35 37 78 2d 46 00 00 00  0c 00 04 01 35 39 78 2d  |57x-F.......59x-|
-000065d0  47 00 00 00 0c 00 04 01  36 30 78 2d 49 00 00 00  |G.......60x-I...|
-000065e0  0c 00 04 01 36 32 78 2d  4a 00 00 00 0c 00 04 01  |....62x-J.......|
-000065f0  36 33 78 2d 4b 00 00 00  0c 00 04 01 36 34 78 2d  |63x-K.......64x-|
-00006600  4e 00 00 00 0c 00 04 01  36 37 78 2d 52 00 00 00  |N.......67x-R...|
-00006610  0c 00 04 01 37 31 78 2d  55 00 00 00 0c 00 04 01  |....71x-U.......|
-00006620  37 34 78 2d 56 00 00 00  0c 00 04 01 37 35 78 2d  |74x-V.......75x-|
-00006630  57 00 00 00 0c 00 04 01  37 36 78 2d 58 00 00 00  |W.......76x-X...|
-00006640  0c 00 04 01 37 37 78 2d  59 00 00 00 0c 00 04 01  |....77x-Y.......|
-00006650  37 38 78 2d 5a 00 00 00  0c 00 04 01 37 39 78 2d  |78x-Z.......79x-|
-00006660  5b 00 00 00 0c 00 04 01  38 30 78 2d 5d 00 00 00  |[.......80x-]...|
-00006670  0c 00 04 01 38 32 78 2d  5e 00 00 00 0c 00 04 01  |....82x-^.......|
-00006680  38 33 78 2d 5f 00 00 00  0c 00 04 01 38 34 78 2d  |83x-_.......84x-|
-00006690  60 00 00 00 0c 00 04 01  38 35 78 2d 61 00 00 00  |`.......85x-a...|
-000066a0  0c 00 04 01 38 36 78 2d  62 00 00 00 0c 00 04 01  |....86x-b.......|
-000066b0  38 37 78 2d 64 00 00 00  0c 00 04 01 38 39 78 2d  |87x-d.......89x-|
-000066c0  65 00 00 00 0c 00 04 01  39 30 78 2d 69 00 00 00  |e.......90x-i...|
-000066d0  0c 00 04 01 39 34 78 2d  6a 00 00 00 0c 00 04 01  |....94x-j.......|
-000066e0  39 35 78 2d 6b 00 00 00  0c 00 04 01 39 36 78 2d  |95x-k.......96x-|
-000066f0  6c 00 00 00 0c 00 04 01  39 37 78 2d 6d 00 00 00  |l.......97x-m...|
-00006700  0c 00 04 01 39 38 78 2d  6e 00 00 00 0c 00 04 01  |....98x-n.......|
-00006710  39 39 78 2d 6f 00 00 00  10 00 05 01 31 30 30 78  |99x-o.......100x|
-00006720  2d 00 00 00 70 00 00 00  10 00 05 01 31 30 31 78  |-...p.......101x|
-00006730  2d 00 00 00 72 00 00 00  10 00 05 01 31 30 33 78  |-...r.......103x|
-00006740  2d 00 00 00 73 00 00 00  10 00 05 01 31 30 34 78  |-...s.......104x|
-00006750  2d 00 00 00 75 00 00 00  10 00 05 01 31 30 36 78  |-...u.......106x|
-00006760  2d 00 00 00 76 00 00 00  10 00 05 01 31 30 37 78  |-...v.......107x|
-00006770  2d 00 00 00 77 00 00 00  10 00 05 01 31 30 38 78  |-...w.......108x|
-00006780  2d 00 00 00 78 00 00 00  10 00 05 01 31 30 39 78  |-...x.......109x|
-00006790  2d 00 00 00 7a 00 00 00  10 00 05 01 31 31 31 78  |-...z.......111x|
-000067a0  2d 00 00 00 7b 00 00 00  10 00 05 01 31 31 32 78  |-...{.......112x|
-000067b0  2d 00 00 00 7e 00 00 00  10 00 05 01 31 31 35 78  |-...~.......115x|
-000067c0  2d e6 a9 53 80 00 00 00  30 00 05 01 31 31 37 78  |-..S....0...117x|
-000067d0  2d 83 01 66 8c 00 6c 00  2a 4c ce 8d a7 00 6c 00  |-..f..l.*L....l.|
-000067e0  8e 47 bc ac 56 00 6c 00  f8 7b c2 b3 00 00 14 00  |.G..V.l..{......|
-000067f0  b4 28 97 e4 00 00 00 00  0c 00 00 de 78 b2 28 ec  |.(..........x.(.|
-00006800  ff 07 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-00006810  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
-*
-00006c00  00 00 00 00 03 00 00 00  04 00 00 00 05 00 00 00  |................|
-00006c10  06 00 00 00 07 00 00 00  08 00 00 00 09 00 00 00  |................|
-00006c20  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
-*
-00007530
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+24+0 records in
+24+0 records out
+25165824 bytes (25 MB, 24 MiB) copied, 0,00717528 s, 3,5 GB/s
+[.] Create ext4 file system and mount
+Filesystem features:      ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+[.] Create test files
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+total 21
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼1∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼2∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼3∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼4∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼5∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼6∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼7∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼8∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rw-r----- 1 root root     8 Nov 18 19:22 ∼∼9∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+drwx------ 2 root root 12288 Nov 18 19:22 lost+found
+[.] Delete all test files
+total 12
+drwx------ 2 root root 12288 Nov 18 19:22 lost+found
+[.] run overwrite -meta:5000 -data:all -path:/tmp/testfs
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+Writing data: 
+100% 
+
+Time: 00:00:00.578 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+24+0 records in
+24+0 records out
+25165824 bytes (25 MB, 24 MiB) copied, 0,00714761 s, 3,5 GB/s
+[.] Create ntfs file system and mount
+/tmp/RAWdata is not a block device.
+mkntfs forced anyway.
+The sector size was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 512 bytes.
+The partition start sector was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The number of sectors per track was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The number of heads was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+To boot from a device, Windows needs the 'partition start sector', the 'sectors per track' and the 'number of heads' to be set.
+Windows will not be able to boot from this device.
+[.] Create test files
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+[.] test file name length: 46
+total 5
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼1∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼2∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼3∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼4∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼5∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼6∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼7∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼8∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+-rwxrwxrwx 1 root root 8 Nov 18 19:22 ∼∼9∼∼тестирање∼∼тестирање∼∼тестирање∼∼Moh5za∼∼
+[.] Delete all test files
+total 0
+[.] run overwrite -meta:70 -data:all -path:/tmp/testfs
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+Writing data: 
+100% 
+
+Time: 00:00:00.62 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
 [.] clean up

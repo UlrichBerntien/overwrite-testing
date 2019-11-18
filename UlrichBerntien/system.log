@@ -1,5 +1,5 @@
 [.] Get overwrite program
-[.] Head of the source file with version info
+[.] Head of the source file
 
 /*
 TITLE:			Overwrite Program
@@ -8,12 +8,14 @@ CODE:			github.com/ivoprogram/overwrite
 LICENSE:		GNU General Public License v3.0 http://www.gnu.org/licenses/gpl.html
 AUTHOR:			Ivo Gjorgjievski
 WEBSITE:		ivoprogram.github.io
-VERSION:		1.5.1 2019-11-14
+VERSION:		1.5.2 2019-11-16
 
 [.] Compile overwrite program
-[.] Hashes for version compare
-91b91ab5e7313b697ee269b3c9cbdf4b  overwrite
-7d944a39c202463a3900fc9808972ed3  overwrite.c
+[.] SHA-1 hashes for version compare
+16d9c048d30391355b5d4a97fedcfd517bfcc6d1  overwrite
+8c948e8e8093fa5acbc3dc5702f0ca6c8c82d34b  overwrite.c
 [.] used test system
 Linux Gate1.home.arpa 5.0.0-31-generic #33~18.04.1-Ubuntu SMP Tue Oct 1 10:20:39 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
 PRETTY_NAME="Ubuntu 18.04.3 LTS"
+[.] overwrite version
+Overwrite Version 1.5.2 2019-11-16

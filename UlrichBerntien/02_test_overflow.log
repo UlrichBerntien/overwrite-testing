@@ -1,8 +1,10 @@
 [.] overwrite version
-
-Overwrite Version 1.5.1 2019-11-14
+Overwrite Version 1.5.2 2019-11-16
 [.] Generate very long argument
 [.] path argument lenth is 1024
 [.] run overwrite program with very long argument
-././02_test_overflow.sh: line 19:  6769 Segmentation fault      (core dumped) ./overwrite -meta:1 -path:$FLONG 2>&1
-[X] missing error message
+
+Writing metadata: 
+Error 36, File name too long. 
+Error writing metadata file. 
+[0] error message found, test passed

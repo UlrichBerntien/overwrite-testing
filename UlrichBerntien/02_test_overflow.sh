@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
+set -o nounset
 
-if [[ ! -x ./overwrite ]]; then
-    ./load_overwrite.sh
-fi
-echo '[.] overwrite version'
-./overwrite --version
+./load_overwrite.sh
 
 echo '[.] Generate very long argument'
 # current PATH_MAX is 4096 in Linux.
 FLONG="x"
-for i in $(seq 10); do
+for _ in $(seq 10); do
     FLONG=$FLONG$FLONG
 done
 

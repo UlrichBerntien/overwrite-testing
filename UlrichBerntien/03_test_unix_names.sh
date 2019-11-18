@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -o nounset
 
 RAW='/tmp/RAWdata'
 FS='/tmp/testfs'
@@ -6,15 +7,11 @@ FS='/tmp/testfs'
 # Some directory to test
 UNIX_DIR_NAMES=('simple' 'colon:' 'backslash\\' 'unicode̷ ' 'space' 'spaceend ' 'space in')
 
-if [[ $EUID != 0 ]]; then
-    echo "[!] mount/unmount operations needs root privilege"
+if [[ $EUID -ne 0 ]]; then
+    echo '[!] mount/unmount operations needs root privilege'
     exit
-fi
-if [[ ! -x ./overwrite ]]; then
-    ./load_overwrite.sh
-fi
-echo '[.] overwrite version'
-./overwrite --version
+fi    
+./load_overwrite.sh
 
 echo '[.] Create a small test drive'
 dd bs=512k count=1 if=/dev/zero "of=$RAW"
@@ -40,12 +37,11 @@ do
     # use absolute path name because overwrite does not handle path names
     # starting with a space.
     OV_ARGUMENTS=("-meta:10" "-path:$FS/$name")
-    echo "[.] call: ${OV_ARGUMENTS[@]}"
+    echo '[.] call overwrite' "${OV_ARGUMENTS[@]}"
     ./overwrite "${OV_ARGUMENTS[@]}"
 done
 
 echo '[.] unmount the test file system'
-sync -f "$FS"
 umount "$FS"
 
 echo '[.] check the data on the test drive'
