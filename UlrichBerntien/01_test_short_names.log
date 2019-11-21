@@ -1,0 +1,184 @@
+[.] overwrite version
+Overwrite Version 1.5.2 2019-11-16
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00168301 s, 2,5 GB/s
+[.] Create fat file system and mount
+mkfs.fat 4.1 (2017-01-24)
+[.] Create 2 short name test files in the root directory
+total 20
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rwxr-x---  1 root root     8 Nov 18 19:22 1FIRST1.TXT
+-rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] delete the first file only, NOT the second file
+total 18
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.1 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00144147 s, 2,9 GB/s
+[.] Create exfat file system and mount
+mkexfatfs 1.2.8
+Creating... done.
+Flushing... done.
+File system created successfully.
+[.] Create 2 short name test files in the root directory
+total 12
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 1FIRST1.TXT
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+[.] delete the first file only, NOT the second file
+total 8
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00231241 s, 1,8 GB/s
+[.] Create vfat file system and mount
+mkfs.fat 4.1 (2017-01-24)
+[.] Create 2 short name test files in the root directory
+total 20
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rwxr-x---  1 root root     8 Nov 18 19:22 1FIRST1.TXT
+-rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] delete the first file only, NOT the second file
+total 18
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00145315 s, 2,9 GB/s
+[.] Create ext2 file system and mount
+Filesystem features:      ext_attr resize_inode dir_index filetype sparse_super large_file
+[.] Create 2 short name test files in the root directory
+total 15
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rw-r-----  1 root root     8 Nov 18 19:22 1FIRST1.TXT
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+-rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] delete the first file only, NOT the second file
+total 14
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+-rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.1 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00222772 s, 1,9 GB/s
+[.] Create ext4 file system and mount
+Filesystem features:      ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+[.] Create 2 short name test files in the root directory
+total 15
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rw-r-----  1 root root     8 Nov 18 19:22 1FIRST1.TXT
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+-rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] delete the first file only, NOT the second file
+total 14
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+-rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.1 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00299299 s, 1,4 GB/s
+[.] Create ntfs file system and mount
+/tmp/RAWdata is not a block device.
+mkntfs forced anyway.
+The sector size was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 512 bytes.
+The partition start sector was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The number of sectors per track was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The number of heads was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+To boot from a device, Windows needs the 'partition start sector', the 'sectors per track' and the 'number of heads' to be set.
+Windows will not be able to boot from this device.
+[.] Create 2 short name test files in the root directory
+total 5
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 1FIRST1.TXT
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+[.] delete the first file only, NOT the second file
+total 5
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up

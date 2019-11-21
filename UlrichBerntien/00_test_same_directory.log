@@ -1,0 +1,226 @@
+[.] overwrite version
+Overwrite Version 1.5.2 2019-11-16
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00422954 s, 992 MB/s
+[.] Create fat file system and mount
+mkfs.fat 4.1 (2017-01-24)
+[.] Create 10 test files in the root directory
+total 36
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   340 Nov 18 19:22 ..
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
+[.] delete the 10 test files
+total 16
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   340 Nov 18 19:22 ..
+[.] run overwrite program with -meta:20 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.4 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00212865 s, 2,0 GB/s
+[.] Create exfat file system and mount
+mkexfatfs 1.2.8
+Creating... done.
+Flushing... done.
+File system created successfully.
+[.] Create 10 test files in the root directory
+total 44
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI10.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI1.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI2.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI3.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI4.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI5.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI6.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI7.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI8.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI9.txt
+[.] delete the 10 test files
+total 4
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+[.] run overwrite program with -meta:20 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00176985 s, 2,4 GB/s
+[.] Create vfat file system and mount
+mkfs.fat 4.1 (2017-01-24)
+[.] Create 10 test files in the root directory
+total 36
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
+-rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
+[.] delete the 10 test files
+total 16
+drwxr-x---  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+[.] run overwrite program with -meta:20 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.4 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,0014837 s, 2,8 GB/s
+[.] Create ext2 file system and mount
+Filesystem features:      ext_attr resize_inode dir_index filetype sparse_super large_file
+[.] Create 10 test files in the root directory
+total 23
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+[.] delete the 10 test files
+total 13
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+[.] run overwrite program with -meta:20 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,0028799 s, 1,5 GB/s
+[.] Create ext4 file system and mount
+Filesystem features:      ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+[.] Create 10 test files in the root directory
+total 23
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
+-rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+[.] delete the 10 test files
+total 13
+drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
+drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
+drwx------  2 root root 12288 Nov 18 19:22 lost+found
+[.] run overwrite program with -meta:20 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
+[.] Create a small test drive
+4+0 records in
+4+0 records out
+4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00149777 s, 2,8 GB/s
+[.] Create ntfs file system and mount
+/tmp/RAWdata is not a block device.
+mkntfs forced anyway.
+The sector size was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 512 bytes.
+The partition start sector was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The number of sectors per track was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The number of heads was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+To boot from a device, Windows needs the 'partition start sector', the 'sectors per track' and the 'number of heads' to be set.
+Windows will not be able to boot from this device.
+[.] Create 10 test files in the root directory
+total 9
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI10.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI1.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI2.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI3.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI4.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI5.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI6.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI7.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI8.txt
+-rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI9.txt
+[.] delete the 10 test files
+total 4
+drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
+drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
+[.] run overwrite program with -meta:20 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.4 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[O] test case passed. No file name rest found
+[.] clean up
