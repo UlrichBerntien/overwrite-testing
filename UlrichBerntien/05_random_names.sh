@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -o nounset
 
-RAW='/tmp/RAWdata'
-FS='/tmp/testfs'
+test_volume='/tmp/test_volumedata'
+test_volume_root='/tmp/testfs'
 
 # List of generated file names with pattern prepared in 8 names
-NAMES=(
+test_names=(
 RZP2Z9RZKC TyzCRI2fhw GU6jMIsHDs 0PqZPeM7nO kU5tkqjdyw M5ZWQ3OEIg 1FrKaGmkM4
 vhKw01jQ4S GsFtI7Qetl 9Kip7Z7BY7 4JyDf3TlXp AeODb2XVjC lE9ExUTPXg SsOWqpyN5p
 dwwjTyR4ka glZWG2uOct wWW36LOmFk 0vvDwdWx9N 74msnI0ZAt IJb7DIm96a aB5xRQJ0xo
@@ -27,69 +27,70 @@ TeiKooMei8 DaviuQu5ei aeChuph9ei ahQ2MA4RK9 rooG5Quaec chaif3eiCh shohquieW0
 civ1Uiphee Aid5ooGh1z ceZovie2bu ogai6ku5eK li8eiXaeve Eedaz3teo0 FaN3too5su
 eev1quoo1O Phae1xiesa wozuZ8heiN sealeiRi2a tahpish4Re eph3Phin4i eipoV7Bo0W)
 
-# The part in 8 of the NAMES
-PATTERN='MA4RK'
+# The part in 8 names of the test_names
+test_name_part='MA4RK'
 
 if [[ $EUID -ne 0 ]]; then
     echo '[!] mount/unmount operations needs root privilege'
     exit
-fi    
+fi
 ./load_overwrite.sh
 
-# check some file systems
-for mkfs in 'fat' 'exfat' 'vfat' 'ext2' 'ext4' 'ntfs'
-do
-    echo '[.] Create a small test drive'
-    dd bs=1G count=1 if=/dev/zero "of=$RAW"
-    echo "[.] Create $mkfs file system and mount"
-    if [[ "$mkfs" =~ 'ext' ]]; then
-        # ext4 file system with outjournal, see overwrite documentation
-        mkfs.$mkfs -q -O ^has_journal "$RAW"
-        tune2fs -l "$RAW" | grep -iE '(features|journal)'
-    elif [[ "$mkfs" == 'ntfs' ]]; then
-        # need force switch to generate NTFS in a file
-        mkfs.$mkfs -q -F "$RAW"
-    else
-        mkfs.$mkfs "$RAW"
+for test_filesystem in 'exfat' 'ext2' 'ext3' 'ext4' 'f2fs' 'fat' 'ntfs' 'xfs'
+do 
+    if ! hash mkfs.$test_filesystem; then
+        continue
     fi
-    mkdir "$FS"
-    mount "$RAW" "$FS"
+    echo '[.] create empty test volume'
+    dd bs=1G count=1 if=/dev/zero "of=$test_volume"
+    echo "[.] create $test_filesystem file system and mount"
+    if [[ "$test_filesystem" == 'ntfs' ]]; then
+        # NTFS file system needs force switch to create inside a file
+        mkfs.$test_filesystem -q -F "$test_volume"
+    else
+        mkfs.$test_filesystem "$test_volume"
+    fi
+    mkdir "$test_volume_root"
+    mount "$test_volume" "$test_volume_root"
 
-    echo '[.] Create test directory'
-    mkdir "$FS/DIR1/"
-    echo '[.] Create test files'
-    for i in "${NAMES[@]}"
+    echo '[.] create test directory'
+    mkdir "$test_volume_root/DIR1/"
+    echo '[.] create test files'
+    for i in "${test_names[@]}"
     do
-        echo "content" > "$FS/DIR1/$i"
+        touch "$test_volume_root/DIR1/$i"
     done
-    ls -C -w 100 "$FS/DIR1"
+    ls -C -w 100 "$test_volume_root/DIR1"
     echo '[.] Delete some test files'
-    rm $FS/DIR1/*${PATTERN}*
+    rm $test_volume_root/DIR1/*${test_name_part}*
     echo '[.] directory content after delete'
-    ls -C -w 100 "$FS/DIR1"
+    ls -C -w 100 "$test_volume_root/DIR1"
 
-    # 8 files are deleted. So call overwrite program with -meta:800 to overwrite 800 entries.
-    OV_PARAMTERS=("-meta:800" "-data:all" "-path:$FS/DIR1")
+    # 8 files are deleted. So call overwrite program with -meta:80 to overwrite 80 entries.
+    OV_PARAMTERS=("-meta:80" "-path:$test_volume_root/DIR1")
     echo '[.] run overwrite' "${OV_PARAMTERS[@]}"
     ./overwrite "${OV_PARAMTERS[@]}"
 
     echo '[.] unmount the test file system'
-    umount "$FS"
-    # extract strings in 16-bit little endian 
-    strings -n 5 -e l $RAW > /tmp/strs
+    umount "$test_volume_root"
+    # extract strings in 16-bit little endian
+    strings -n ${#test_name_part} -e l $test_volume > /tmp/strs
 
     echo '[.] check the metadata'
-    if grep -qF "$PATTERN" "$RAW"; then
-        echo '[X] file name rest found on test drive!'
-        hexdump -C $RAW | grep -F "$PATTERN"
-    elif grep -qF "$PATTERN" /tmp/strs; then
-        echo '[X] file name rest (2 byte charset) found on test drive!'
-        grep -F "$PATTERN" /tmp/strs
+    if grep -qF "$test_name_part" "$test_volume"; then
+        echo '[E] file name rest found on test volume'
+        echo "[ ] test case '$(basename $0)' with file system '$test_filesystem' fail"
+        hexdump -C $test_volume | grep -F "$test_name_part"
+    elif grep -qF "$test_name_part" /tmp/strs; then
+        echo '[E] file name rest (2 byte charset) found on test volume'
+        echo "[ ] test case '$(basename $0)' with file system '$test_filesystem' fail"
+        grep -F "$test_name_part" /tmp/strs
     else
-        echo '[O] test case passed. No file name rest found'
+        echo '[.] No file name rest found'
+        echo "[X] test case '$(basename $0)' with file system '$test_filesystem' passed"
     fi
 
     echo '[.] clean up'
-    rm -rf "$FS"
-    rm "$RAW"
+    rmdir "$test_volume_root"
+    rm "$test_volume"
 done

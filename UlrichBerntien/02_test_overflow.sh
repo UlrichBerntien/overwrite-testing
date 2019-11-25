@@ -6,7 +6,7 @@ set -o nounset
 echo '[.] Generate very long argument'
 # current PATH_MAX is 4096 in Linux.
 FLONG="x"
-for _ in $(seq 10); do
+for _ in $(seq 13); do
     FLONG=$FLONG$FLONG
 done
 
@@ -16,8 +16,11 @@ echo '[.] run overwrite program with very long argument'
 ./overwrite -meta:1 -path:$FLONG 2>&1
 # Second run to analyse the output
 MSG=$(./overwrite -meta:1 -path:$FLONG 2>&1)
-if [[ "$MSG" =~ 'Error' ]]; then
-    echo '[0] error message found, test passed'
+if [[ "$MSG" =~ 'too long' ]]; then
+    echo '[.] error message found'
+    echo "[X] test case '$(basename $0)' passed"
+
 else
-    echo '[X] missing error message'
+    echo '[E] missing error message'
+    echo "[ ] test case '$(basename $0)' fail"
 fi

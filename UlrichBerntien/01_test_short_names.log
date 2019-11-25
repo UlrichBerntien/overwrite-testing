@@ -1,54 +1,33 @@
 [.] overwrite version
-Overwrite Version 1.5.2 2019-11-16
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00168301 s, 2,5 GB/s
-[.] Create fat file system and mount
-mkfs.fat 4.1 (2017-01-24)
-[.] Create 2 short name test files in the root directory
-total 20
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rwxr-x---  1 root root     8 Nov 18 19:22 1FIRST1.TXT
--rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
-[.] delete the first file only, NOT the second file
-total 18
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
-[.] run overwrite program
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-
-Time: 00:00:00.1 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[O] test case passed. No file name rest found
-[.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00144147 s, 2,9 GB/s
-[.] Create exfat file system and mount
+Overwrite Version 1.6.1 2019-11-21
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,520591 s, 2,1 GB/s
+[.] create exfat file system and mount
 mkexfatfs 1.2.8
 Creating... done.
 Flushing... done.
 File system created successfully.
-[.] Create 2 short name test files in the root directory
-total 12
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
--rwxrwxrwx  1 root root    8 Nov 18 19:22 1FIRST1.TXT
--rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  SECOND.TXT	SUB
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
 [.] delete the first file only, NOT the second file
-total 8
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
--rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+/tmp/testfs:
+.  ..  SECOND.TXT  SUB
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
 [.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
@@ -57,26 +36,247 @@ Time: 00:00:00.2
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '01_test_short_names.sh' with file system 'exfat' passed
 [.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00231241 s, 1,8 GB/s
-[.] Create vfat file system and mount
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,531525 s, 2,0 GB/s
+[.] create ext2 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: af65a560-02fa-4246-8a7f-4421b97c24df
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  lost+found	SECOND.TXT  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
+[.] delete the first file only, NOT the second file
+/tmp/testfs:
+.  ..  lost+found  SECOND.TXT  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.1 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '01_test_short_names.sh' with file system 'ext2' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,559421 s, 1,9 GB/s
+[.] create ext3 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 94aed3c0-e5ff-4654-9a86-f025187362bb
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  lost+found	SECOND.TXT  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
+[.] delete the first file only, NOT the second file
+/tmp/testfs:
+.  ..  lost+found  SECOND.TXT  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.1 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '01_test_short_names.sh' with file system 'ext3' fail
+00254020  31 46 49 52 53 54 31 2e  54 58 54 00 03 80 00 00  |1FIRST1.TXT.....|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,525099 s, 2,0 GB/s
+[.] create ext4 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: a2be4d81-caac-47c0-9ea4-236f87cf8780
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  lost+found	SECOND.TXT  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
+[.] delete the first file only, NOT the second file
+/tmp/testfs:
+.  ..  lost+found  SECOND.TXT  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '01_test_short_names.sh' with file system 'ext4' fail
+2000b020  31 46 49 52 53 54 31 2e  54 58 54 00 0f 00 00 00  |1FIRST1.TXT.....|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,525262 s, 2,0 GB/s
+[.] create f2fs file system and mount
+
+	F2FS-tools: mkfs.f2fs Ver: 1.11.0 (2018-07-10)
+
+Info: Disable heap-based policy
+Info: Debug level = 0
+Info: Label = 
+Info: Trim is enabled
+Info: Segments per section = 1
+Info: Sections per zone = 1
+Info: sector size = 512
+Info: total sectors = 2097152 (1024 MB)
+Info: zone aligned segment0 blkaddr: 512
+Info: format version with
+  "Linux version 5.0.0-31-generic (buildd@lgw01-amd64-046) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #33~18.04.1-Ubuntu SMP Tue Oct 1 10:20:39 UTC 2019"
+Info: [/tmp/test_volumedata] Discarding device
+Info: Overprovision ratio = 6.360%
+Info: Overprovision segments = 68 (GC reserved = 39)
+Info: format successful
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  SECOND.TXT	SUB
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
+[.] delete the first file only, NOT the second file
+/tmp/testfs:
+.  ..  SECOND.TXT  SUB
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '01_test_short_names.sh' with file system 'f2fs' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,517729 s, 2,1 GB/s
+[.] create fat file system and mount
 mkfs.fat 4.1 (2017-01-24)
-[.] Create 2 short name test files in the root directory
-total 20
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rwxr-x---  1 root root     8 Nov 18 19:22 1FIRST1.TXT
--rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  SECOND.TXT	SUB
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
 [.] delete the first file only, NOT the second file
-total 18
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rwxr-x---  1 root root     8 Nov 18 19:22 SECOND.TXT
+/tmp/testfs:
+.  ..  SECOND.TXT  SUB
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
 [.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
@@ -85,93 +285,41 @@ Time: 00:00:00.2
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '01_test_short_names.sh' with file system 'fat' passed
 [.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00145315 s, 2,9 GB/s
-[.] Create ext2 file system and mount
-Filesystem features:      ext_attr resize_inode dir_index filetype sparse_super large_file
-[.] Create 2 short name test files in the root directory
-total 15
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rw-r-----  1 root root     8 Nov 18 19:22 1FIRST1.TXT
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
--rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
-[.] delete the first file only, NOT the second file
-total 14
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
--rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
-[.] run overwrite program
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-
-Time: 00:00:00.1 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[O] test case passed. No file name rest found
-[.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00222772 s, 1,9 GB/s
-[.] Create ext4 file system and mount
-Filesystem features:      ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
-[.] Create 2 short name test files in the root directory
-total 15
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rw-r-----  1 root root     8 Nov 18 19:22 1FIRST1.TXT
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
--rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
-[.] delete the first file only, NOT the second file
-total 14
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
--rw-r-----  1 root root     8 Nov 18 19:22 SECOND.TXT
-[.] run overwrite program
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-
-Time: 00:00:00.1 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[O] test case passed. No file name rest found
-[.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00299299 s, 1,4 GB/s
-[.] Create ntfs file system and mount
-/tmp/RAWdata is not a block device.
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,523801 s, 2,0 GB/s
+[.] create ntfs file system and mount
+/tmp/test_volumedata is not a block device.
 mkntfs forced anyway.
-The sector size was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 512 bytes.
-The partition start sector was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
-The number of sectors per track was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
-The number of heads was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The sector size was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 512 bytes.
+The partition start sector was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of sectors per track was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of heads was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
 To boot from a device, Windows needs the 'partition start sector', the 'sectors per track' and the 'number of heads' to be set.
 Windows will not be able to boot from this device.
-[.] Create 2 short name test files in the root directory
-total 5
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
--rwxrwxrwx  1 root root    8 Nov 18 19:22 1FIRST1.TXT
--rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  SECOND.TXT	SUB
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
 [.] delete the first file only, NOT the second file
-total 5
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
--rwxrwxrwx  1 root root    8 Nov 18 19:22 SECOND.TXT
+/tmp/testfs:
+.  ..  SECOND.TXT  SUB
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
 [.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
@@ -180,5 +328,50 @@ Time: 00:00:00.2
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '01_test_short_names.sh' with file system 'ntfs' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,518742 s, 2,1 GB/s
+[.] create xfs file system and mount
+meta-data=/tmp/test_volumedata   isize=512    agcount=4, agsize=65536 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=0, rmapbt=0, reflink=0
+data     =                       bsize=4096   blocks=262144, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[.] create 2 short name test files in the root directory
+/tmp/testfs:
+.  ..  1FIRST1.TXT  SECOND.TXT	SUB
+
+/tmp/testfs/SUB:
+.  ..  1FIRST1.TXT  SECOND.TXT
+[.] delete the first file only, NOT the second file
+/tmp/testfs:
+.  ..  SECOND.TXT  SUB
+
+/tmp/testfs/SUB:
+.  ..  SECOND.TXT
+[.] run overwrite program
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.2 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '01_test_short_names.sh' with file system 'xfs' passed
 [.] clean up

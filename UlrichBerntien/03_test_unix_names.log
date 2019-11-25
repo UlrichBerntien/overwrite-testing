@@ -1,75 +1,603 @@
 [.] overwrite version
-Overwrite Version 1.5.2 2019-11-16
-[.] Create a small test drive
+Overwrite Version 1.6.1 2019-11-21
+[.] create empty test volume
 1+0 records in
 1+0 records out
-524288 bytes (524 kB, 512 KiB) copied, 0,000733728 s, 715 MB/s
-[.] Create ext4 file system and mount
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,522343 s, 2,1 GB/s
+[.] create ext2 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 9bb13235-9ed3-4343-ac4b-76ab76f20044
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
 
-Filesystem too small for a journal
-[.] Create test directories
-total 20
-dr-xr-xr-x 10 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
-drwxr-x---  2 root root  1024 Nov 18 19:22 backslash\\
-drwxr-x---  2 root root  1024 Nov 18 19:22 colon:
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
-drwxr-x---  2 root root  1024 Nov 18 19:22 simple
-drwxr-x---  2 root root  1024 Nov 18 19:22 space
-drwxr-x---  2 root root  1024 Nov 18 19:22 spaceend 
-drwxr-x---  2 root root  1024 Nov 18 19:22 space in
-drwxr-x---  2 root root  1024 Nov 18 19:22 unicode̷ 
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create test directories
+/tmp/testfs:
+.   backslash\\  lost+found  space	space in
+..  colon:	 simple      spaceend 	unicode̷ 
+
+/tmp/testfs/backslash\\:
+.  ..
+
+/tmp/testfs/colon::
+.  ..
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/simple:
+.  ..
+
+/tmp/testfs/space:
+.  ..
+
+/tmp/testfs/spaceend :
+.  ..
+
+/tmp/testfs/space in:
+.  ..
+
+/tmp/testfs/unicode̷ :
+.  ..
 [.] run overwrite program
-[.] call overwrite -meta:10 -path:/tmp/testfs/simple
+[.] call overwrite -meta:20 -path:/tmp/testfs/simple
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.1 
+Time: 00:00:00.3 
 Done. 
-[.] call overwrite -meta:10 -path:/tmp/testfs/colon:
+[.] call overwrite -meta:20 -path:/tmp/testfs/colon:
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.1 
+Time: 00:00:00.4 
 Done. 
-[.] call overwrite -meta:10 -path:/tmp/testfs/backslash\\
+[.] call overwrite -meta:20 -path:/tmp/testfs/backslash\\
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.1 
+Time: 00:00:00.4 
 Done. 
-[.] call overwrite -meta:10 -path:/tmp/testfs/unicode̷ 
+[.] call overwrite -meta:20 -path:/tmp/testfs/unicode̷ 
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.1 
+Time: 00:00:00.5 
 Done. 
-[.] call overwrite -meta:10 -path:/tmp/testfs/space
+[.] call overwrite -meta:20 -path:/tmp/testfs/space
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.1 
+Time: 00:00:00.5 
 Done. 
-[.] call overwrite -meta:10 -path:/tmp/testfs/spaceend 
+[.] call overwrite -meta:20 -path:/tmp/testfs/spaceend 
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.1 
+Time: 00:00:00.5 
 Done. 
-[.] call overwrite -meta:10 -path:/tmp/testfs/space in
+[.] call overwrite -meta:20 -path:/tmp/testfs/space in
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.1 
+Time: 00:00:00.5 
 Done. 
 [.] unmount the test file system
-[.] check the data on the test drive
-[O] passed. No file name rest found
+[.] check the metadata
+[.] No file name rest found
+[X] test case '03_test_unix_names.sh' with file system 'ext2' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,522797 s, 2,1 GB/s
+[.] create ext3 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: d273e9a5-2619-4923-a231-4597d78a052e
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create test directories
+/tmp/testfs:
+.   backslash\\  lost+found  space	space in
+..  colon:	 simple      spaceend 	unicode̷ 
+
+/tmp/testfs/backslash\\:
+.  ..
+
+/tmp/testfs/colon::
+.  ..
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/simple:
+.  ..
+
+/tmp/testfs/space:
+.  ..
+
+/tmp/testfs/spaceend :
+.  ..
+
+/tmp/testfs/space in:
+.  ..
+
+/tmp/testfs/unicode̷ :
+.  ..
+[.] run overwrite program
+[.] call overwrite -meta:20 -path:/tmp/testfs/simple
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/colon:
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/backslash\\
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.8 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/unicode̷ 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.7 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/spaceend 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space in
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '03_test_unix_names.sh' with file system 'ext3' fail
+00257020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+0025b020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+0025f020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+00263020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+00267020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+0026b020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,522558 s, 2,1 GB/s
+[.] create ext4 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 751c4abb-3742-4555-96b4-3f680152a18e
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create test directories
+/tmp/testfs:
+.   backslash\\  lost+found  space	space in
+..  colon:	 simple      spaceend 	unicode̷ 
+
+/tmp/testfs/backslash\\:
+.  ..
+
+/tmp/testfs/colon::
+.  ..
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/simple:
+.  ..
+
+/tmp/testfs/space:
+.  ..
+
+/tmp/testfs/spaceend :
+.  ..
+
+/tmp/testfs/space in:
+.  ..
+
+/tmp/testfs/unicode̷ :
+.  ..
+[.] run overwrite program
+[.] call overwrite -meta:20 -path:/tmp/testfs/simple
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/colon:
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.7 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/backslash\\
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.8 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/unicode̷ 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.6 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.6 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/spaceend 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.9 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space in
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.7 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '03_test_unix_names.sh' with file system 'ext4' fail
+2000c020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+2000d020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+2000e020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+20012020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+20013020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+20014020  5f 5f 5f 52 61 65 51 75  33 68 6f 5f 5f 31 5f 5f  |___RaeQu3ho__1__|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,547495 s, 2,0 GB/s
+[.] create f2fs file system and mount
+
+	F2FS-tools: mkfs.f2fs Ver: 1.11.0 (2018-07-10)
+
+Info: Disable heap-based policy
+Info: Debug level = 0
+Info: Label = 
+Info: Trim is enabled
+Info: Segments per section = 1
+Info: Sections per zone = 1
+Info: sector size = 512
+Info: total sectors = 2097152 (1024 MB)
+Info: zone aligned segment0 blkaddr: 512
+Info: format version with
+  "Linux version 5.0.0-31-generic (buildd@lgw01-amd64-046) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #33~18.04.1-Ubuntu SMP Tue Oct 1 10:20:39 UTC 2019"
+Info: [/tmp/test_volumedata] Discarding device
+Info: Overprovision ratio = 6.360%
+Info: Overprovision segments = 68 (GC reserved = 39)
+Info: format successful
+[.] create test directories
+/tmp/testfs:
+.  ..  backslash\\  colon:  simple  space  spaceend   space in	unicode̷ 
+
+/tmp/testfs/backslash\\:
+.  ..
+
+/tmp/testfs/colon::
+.  ..
+
+/tmp/testfs/simple:
+.  ..
+
+/tmp/testfs/space:
+.  ..
+
+/tmp/testfs/spaceend :
+.  ..
+
+/tmp/testfs/space in:
+.  ..
+
+/tmp/testfs/unicode̷ :
+.  ..
+[.] run overwrite program
+[.] call overwrite -meta:20 -path:/tmp/testfs/simple
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/colon:
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.7 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/backslash\\
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.6 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/unicode̷ 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.4 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/spaceend 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space in
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.6 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '03_test_unix_names.sh' with file system 'f2fs' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,526038 s, 2,0 GB/s
+[.] create ntfs file system and mount
+/tmp/test_volumedata is not a block device.
+mkntfs forced anyway.
+The sector size was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 512 bytes.
+The partition start sector was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of sectors per track was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of heads was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+To boot from a device, Windows needs the 'partition start sector', the 'sectors per track' and the 'number of heads' to be set.
+Windows will not be able to boot from this device.
+[.] create test directories
+chmod: /tmp/testfs: new permissions are r-xrwxrwx, not r-xr-xr-x
+/tmp/testfs:
+.  ..  backslash\\  colon:  simple  space  spaceend   space in	unicode̷ 
+
+/tmp/testfs/backslash\\:
+.  ..
+
+/tmp/testfs/colon::
+.  ..
+
+/tmp/testfs/simple:
+.  ..
+
+/tmp/testfs/space:
+.  ..
+
+/tmp/testfs/spaceend :
+.  ..
+
+/tmp/testfs/space in:
+.  ..
+
+/tmp/testfs/unicode̷ :
+.  ..
+[.] run overwrite program
+[.] call overwrite -meta:20 -path:/tmp/testfs/simple
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/colon:
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/backslash\\
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/unicode̷ 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/spaceend 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.4 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space in
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.3 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '03_test_unix_names.sh' with file system 'ntfs' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,528098 s, 2,0 GB/s
+[.] create xfs file system and mount
+meta-data=/tmp/test_volumedata   isize=512    agcount=4, agsize=65536 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=0, rmapbt=0, reflink=0
+data     =                       bsize=4096   blocks=262144, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[.] create test directories
+/tmp/testfs:
+.  ..  backslash\\  colon:  simple  space  spaceend   space in	unicode̷ 
+
+/tmp/testfs/backslash\\:
+.  ..
+
+/tmp/testfs/colon::
+.  ..
+
+/tmp/testfs/simple:
+.  ..
+
+/tmp/testfs/space:
+.  ..
+
+/tmp/testfs/spaceend :
+.  ..
+
+/tmp/testfs/space in:
+.  ..
+
+/tmp/testfs/unicode̷ :
+.  ..
+[.] run overwrite program
+[.] call overwrite -meta:20 -path:/tmp/testfs/simple
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.4 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/colon:
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.4 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/backslash\\
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/unicode̷ 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.7 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.7 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/spaceend 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.5 
+Done. 
+[.] call overwrite -meta:20 -path:/tmp/testfs/space in
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.6 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '03_test_unix_names.sh' with file system 'xfs' fail
+20006fa0  00 60 10 00 60 5f 5f 5f  52 61 65 51 75 33 68 6f  |.`..`___RaeQu3ho|
+20006fc0  52 61 65 51 75 33 68 6f  5f 5f 32 5f 5f 01 00 10  |RaeQu3ho__2__...|
 [.] clean up

@@ -16,3 +16,5 @@ do
         fi
     fi
 done
+echo "[.] Summary of the test results"
+grep -h "^\[.\] test case '.._" *.log

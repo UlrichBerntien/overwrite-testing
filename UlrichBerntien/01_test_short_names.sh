@@ -1,59 +1,71 @@
 #!/usr/bin/env bash
 set -o nounset
 
-RAW='/tmp/RAWdata'
-FS='/tmp/testfs'
+test_volume='/tmp/test_volumedata'
+test_volume_root='/tmp/testfs'
+
+test_name_part='FIRST'
 
 if [[ $EUID -ne 0 ]]; then
     echo '[!] mount/unmount operations needs root privilege'
     exit
-fi    
+fi
 ./load_overwrite.sh
 
-for mkfs in 'fat' 'exfat' 'vfat' 'ext2' 'ext4' 'ntfs'
-do
-    echo '[.] Create a small test drive'
-    dd bs=1M count=4 if=/dev/zero "of=$RAW"
-    echo "[.] Create $mkfs file system and mount"
-    if [[ "$mkfs" =~ 'ext' ]]; then
-        mkfs.$mkfs -q -O ^has_journal "$RAW"
-        tune2fs -l "$RAW" | grep -iE '(features|journal)'
-    elif [[ "$mkfs" == 'ntfs' ]]; then
-        mkfs.$mkfs -q -F "$RAW"
-    else
-        mkfs.$mkfs "$RAW"
+for test_filesystem in 'exfat' 'ext2' 'ext3' 'ext4' 'f2fs' 'fat' 'ntfs' 'xfs'
+do 
+    if ! hash mkfs.$test_filesystem; then
+        continue
     fi
-    mkdir "$FS"
-    mount "$RAW" "$FS"
+    echo '[.] create empty test volume'
+    dd bs=1G count=1 if=/dev/zero "of=$test_volume"
+    echo "[.] create $test_filesystem file system and mount"
+    if [[ "$test_filesystem" == 'ntfs' ]]; then
+        # NTFS file system needs force switch to create inside a file
+        mkfs.$test_filesystem -q -F "$test_volume"
+    else
+        mkfs.$test_filesystem "$test_volume"
+    fi
+    mkdir "$test_volume_root"
+    mount "$test_volume" "$test_volume_root"
 
-    echo '[.] Create 2 short name test files in the root directory'
-    echo 'content' > $FS/1FIRST1.TXT
-    echo 'content' > $FS/SECOND.TXT
-    ls -al "$FS"
+    echo '[.] create 2 short name test files in the root directory'
+    echo 'content' > $test_volume_root/1${test_name_part}1.TXT
+    echo 'content' > $test_volume_root/SECOND.TXT
+    mkdir $test_volume_root/SUB
+    echo 'content' > $test_volume_root/SUB/1${test_name_part}1.TXT
+    echo 'content' > $test_volume_root/SUB/SECOND.TXT
+    ls -RCa "$test_volume_root"
     echo '[.] delete the first file only, NOT the second file'
-    rm $FS/1FIRST1.TXT
-    ls -al "$FS"
+    rm $test_volume_root/1${test_name_part}1.TXT
+    rm $test_volume_root/SUB/1${test_name_part}1.TXT
+    ls -RCa "$test_volume_root"
 
     echo '[.] run overwrite program'
-    ./overwrite -meta:10 -path:$FS/
+    # call overwrite with -meta:10 to overwrite the 1 removed file
+    ./overwrite -meta:10 -path:$test_volume_root/
+    ./overwrite -meta:10 -path:$test_volume_root/SUB
 
     echo '[.] unmount the test file system'
-    umount "$FS"
+    umount "$test_volume_root"
     # extract strings in 16-bit little endian 
-    strings -n 5 -e l $RAW > /tmp/strs
+    strings -n ${#test_name_part} -e l $test_volume > /tmp/strs
 
     echo '[.] check the metadata'
-    if grep -qF FIRST $RAW; then
-        echo '[X] file name rest found on test drive!'
-        hexdump -C $RAW | grep -F FIRST
-    elif grep -qF FIRST /tmp/strs; then
-        echo '[X] file name rest (2 byte charset) found on test drive!'
-        grep -F FIRST /tmp/strs
+    if grep -qF "$test_name_part" $test_volume; then
+        echo '[E] file name rest found on test volume'
+        echo "[ ] test case '$(basename $0)' with file system '$test_filesystem' fail"
+        hexdump -C $test_volume | grep -F "$test_name_part"
+    elif grep -qF "$test_name_part" /tmp/strs; then
+        echo '[E] file name rest (2 byte charset) found on test volume'
+        echo "[ ] test case '$(basename $0)' with file system '$test_filesystem' fail"
+        grep -F "$test_name_part" /tmp/strs
     else
-        echo '[O] test case passed. No file name rest found'
+        echo '[.] No file name rest found'
+        echo "[X] test case '$(basename $0)' with file system '$test_filesystem' passed"
     fi
-    
+
     echo '[.] clean up'
-    rm -rf "$FS"
-    rm "$RAW"
+    rmdir "$test_volume_root"
+    rm "$test_volume"
 done

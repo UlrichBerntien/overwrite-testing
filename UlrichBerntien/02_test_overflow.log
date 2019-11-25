@@ -1,10 +1,10 @@
 [.] overwrite version
-Overwrite Version 1.5.2 2019-11-16
+Overwrite Version 1.6.1 2019-11-21
 [.] Generate very long argument
-[.] path argument lenth is 1024
+[.] path argument lenth is 8192
 [.] run overwrite program with very long argument
 
-Writing metadata: 
-Error 36, File name too long. 
-Error writing metadata file. 
-[0] error message found, test passed
+Path is too long, parameter -path: 
+ 
+[.] error message found
+[X] test case '02_test_overflow.sh' passed

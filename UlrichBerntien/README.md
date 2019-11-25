@@ -17,44 +17,56 @@ Overwrite is a written in standard C. The source code is published on a [github 
 The files ".sh" are bash shell scripts.
 The files ".log" are output of the script files.
 
+
 **00_test_same_directory**
 
-Overwrite version 1.0 2019-10-04 creates the file in a subdirectory.
-So only one directory entry in the given path was overwritten.
+The test script create 10 test files in the root directory and a 10 test files in a directory 'SUB'.
+The test files are deleted.
+The overwrite program is called to overwrite the meta data in the root directory and
+in the directory 'SUB'. (The overwrite programm is called twice.)
 
-Newer versions passes the test. All directory entries are overwritten.
+The test is executed with different file systems.
 
-Overwrite version 1.5.2 passes this test case.
+Test results:
+
+[X] test case '00_test_same_directory.sh' with file system 'exfat' passed
+[X] test case '00_test_same_directory.sh' with file system 'ext2' passed
+[ ] test case '00_test_same_directory.sh' with file system 'ext3' fail
+[ ] test case '00_test_same_directory.sh' with file system 'ext4' fail
+[X] test case '00_test_same_directory.sh' with file system 'f2fs' passed
+[X] test case '00_test_same_directory.sh' with file system 'fat' passed
+[X] test case '00_test_same_directory.sh' with file system 'ntfs' passed
+[ ] test case '00_test_same_directory.sh' with file system 'xfs' fail
+
 
 **01_test_short_names**
 
 The test script creates 2 test files with short names and deletes the 2nd test file.
-The overwrite call should overwrite the metadata of the 1st test file.
+Test files are created in the root directory and in a directoty SUB.
+The overwrite programm should overwrite the meta data of the 1st test file.
+The overwrite programm is called for both directories.
 
-Overwrite ver1.2-2019-10-28 create files with long names.
-So the directory entry with short name inside the directory
-list was not overwritten.
+Test results:
 
-Overwrite version 1.3.1 2019-10-30 uses short directory names to
-overwrite entries. This works well.
+[X] test case '01_test_short_names.sh' with file system 'exfat' passed
+[X] test case '01_test_short_names.sh' with file system 'ext2' passed
+[ ] test case '01_test_short_names.sh' with file system 'ext3' fail
+[ ] test case '01_test_short_names.sh' with file system 'ext4' fail
+[X] test case '01_test_short_names.sh' with file system 'f2fs' passed
+[X] test case '01_test_short_names.sh' with file system 'fat' passed
+[X] test case '01_test_short_names.sh' with file system 'ntfs' passed
+[X] test case '01_test_short_names.sh' with file system 'xfs' passed
 
-The Test failed with overwrite version 1.5 2019-11-09 and 1.5.1 2019-11-14.
-The first directory entry is not overwritten.
-
-Overwrite versions 1.5.2 and 1.6.1 pass this test case.
 
 **02_test_overflow**
 
-Overwrite version 1.3.1 2019-10-30 uses strcpy and strcat without
-checking the string length. So a very long path name argument
-causes a buffer overflow.
+The test script calls the overwrite program with a too long path name.
+The overwrite program has to respond with an error message.
 
-Overwrite version 1.4.1 2019-11-03 handles also very long path names.
-An error message reports invalid names given as parameter.
+Test results:
 
-Overwrite version 1.5.1 2019-11-14 raises a memory segmentation fault.
+[X] test case '02_test_overflow.sh' passed
 
-Overwrite versions 1.5.2 and 1.6.1 pass this test case.
 
 **03_test_unix_names**
 
@@ -67,26 +79,32 @@ Newer versions handles path names with ':' and '/' at the end.
 Overwrite passes the test if absolute path names are used to prevent
 a path name starting with a space.
 
-Overwrite versions 1.5.2 and 1.6.1 pass this test case.
+Test results:
+
+[X] test case '03_test_unix_names.sh' with file system 'ext2' passed
+[ ] test case '03_test_unix_names.sh' with file system 'ext3' fail
+[ ] test case '03_test_unix_names.sh' with file system 'ext4' fail
+[X] test case '03_test_unix_names.sh' with file system 'f2fs' passed
+[X] test case '03_test_unix_names.sh' with file system 'ntfs' passed
+[ ] test case '03_test_unix_names.sh' with file system 'xfs' fail
+
 
 **04_ext4_file_names**
 
 The test uses an ext4 file system with out journal on a small volume.
 The test creates 9 file, removes the files and calls overwrite.
 
-The ext4 file system with journal is not tested.
-See the overwrite documentation to handle ext with journal.
+Test results:
 
-The overwrite version 1.5.1 2019-11-14 does not remove all parts of the
-file names from the volume.
+[X] test case '04_ext4_file_names.sh' with file system 'exfat' passed
+[X] test case '04_ext4_file_names.sh' with file system 'ext2' passed
+[ ] test case '04_ext4_file_names.sh' with file system 'ext3' fail
+[ ] test case '04_ext4_file_names.sh' with file system 'ext4' fail
+[ ] test case '04_ext4_file_names.sh' with file system 'f2fs' fail
+[X] test case '04_ext4_file_names.sh' with file system 'fat' passed
+[X] test case '04_ext4_file_names.sh' with file system 'ntfs' passed
+[X] test case '04_ext4_file_names.sh' with file system 'xfs' passed
 
-Overwrite version 1.5.2 passes this test case.
-On the ext4 file system without journal overwrite must call with -meta:5000
-to overwrite the 9 test file names. (A call with parameter -meta:4000 is not
-sufficient to overwrite all test file names.)
-
-Overwrite version 1.6.1 fail if -meta:900 was used to overwrite the 9 deleted
-file entries.
 
 **05_random_names**
 
@@ -96,15 +114,17 @@ All file names are 10 character long.
 From this 140 files 8 files are deleted. The names of the 8 files were prepared
 with a string 'MA4RK' inside the 10 character long file name.
 
-The overwrite program with options -meta:800 -data:all is called to overwrite
-the 8 deleted files with 800 metadata entries.
+Test summary of Overwrite Version 1.6.1 2019-11-21:
 
-Overwrite version 1.5.2 does overwrite all names in the FAT file system but not
-in the ext3, ext4 with out journal and NTFS. Rest of the deleted files names
-are readable after the overwrite call.
+[X] test case '05_random_names.sh' with file system 'exfat' passed
+[X] test case '05_random_names.sh' with file system 'ext2' passed
+[ ] test case '05_random_names.sh' with file system 'ext3' fail
+[ ] test case '05_random_names.sh' with file system 'ext4' fail
+[X] test case '05_random_names.sh' with file system 'f2fs' passed
+[X] test case '05_random_names.sh' with file system 'fat' passed
+[ ] test case '05_random_names.sh' with file system 'ntfs' fail
+[ ] test case '05_random_names.sh' with file system 'xfs' fail
 
-Overwrite version 1.6.1 passes the test with FAT, ext3 and ext4 with out journal
-file system. On the NTFS file system 2 names of the deleted files remain on the drive.
 
 ## Support files
 

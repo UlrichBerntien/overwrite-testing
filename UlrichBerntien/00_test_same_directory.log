@@ -1,226 +1,615 @@
 [.] overwrite version
-Overwrite Version 1.5.2 2019-11-16
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00422954 s, 992 MB/s
-[.] Create fat file system and mount
-mkfs.fat 4.1 (2017-01-24)
-[.] Create 10 test files in the root directory
-total 36
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   340 Nov 18 19:22 ..
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
-[.] delete the 10 test files
-total 16
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   340 Nov 18 19:22 ..
-[.] run overwrite program with -meta:20 to overwrite 10 entries
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-
-Time: 00:00:00.4 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[O] test case passed. No file name rest found
-[.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00212865 s, 2,0 GB/s
-[.] Create exfat file system and mount
+Overwrite Version 1.6.1 2019-11-21
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,526372 s, 2,0 GB/s
+[.] create exfat file system and mount
 mkexfatfs 1.2.8
 Creating... done.
 Flushing... done.
 File system created successfully.
-[.] Create 10 test files in the root directory
-total 44
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI10.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI1.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI2.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI3.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI4.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI5.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI6.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI7.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI8.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI9.txt
-[.] delete the 10 test files
-total 4
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
-[.] run overwrite program with -meta:20 to overwrite 10 entries
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT  SUB
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  SUB
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.3 
+Time: 00:00:00.16 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.15 
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '00_test_same_directory.sh' with file system 'exfat' passed
 [.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00176985 s, 2,4 GB/s
-[.] Create vfat file system and mount
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,541685 s, 2,0 GB/s
+[.] create ext2 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: ea589e0b-26d6-483d-8a13-d131b1111d7b
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.	      1NIDCODE.TXT  4NIDCODE.TXT  7NIDCODE.TXT	lost+found
+..	      2NIDCODE.TXT  5NIDCODE.TXT  8NIDCODE.TXT	SUB
+0NIDCODE.TXT  3NIDCODE.TXT  6NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  lost+found  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.16 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.15 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '00_test_same_directory.sh' with file system 'ext2' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,525039 s, 2,0 GB/s
+[.] create ext3 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 1a8cfeaf-dec6-4c50-b9f2-2e921710cbee
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.	      1NIDCODE.TXT  4NIDCODE.TXT  7NIDCODE.TXT	lost+found
+..	      2NIDCODE.TXT  5NIDCODE.TXT  8NIDCODE.TXT	SUB
+0NIDCODE.TXT  3NIDCODE.TXT  6NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  lost+found  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.18 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.16 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume!
+[ ] test case '00_test_same_directory.sh' with file system 'ext3' fail
+0024e040  0d 00 00 00 14 00 0c 01  31 4e 49 44 43 4f 44 45  |........1NIDCODE|
+0024e070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+0024e080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+0024e090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+0024e0c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+0024e0d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+0024e0e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+00256020  30 4e 49 44 43 4f 44 45  2e 54 58 54 03 c0 00 00  |0NIDCODE.TXT....|
+00256030  14 00 0c 01 31 4e 49 44  43 4f 44 45 2e 54 58 54  |....1NIDCODE.TXT|
+00256040  04 c0 00 00 14 00 0c 01  32 4e 49 44 43 4f 44 45  |........2NIDCODE|
+00256070  34 4e 49 44 43 4f 44 45  2e 54 58 54 07 c0 00 00  |4NIDCODE.TXT....|
+00256080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+00256090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+002560c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+002560d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+0025c040  b8 00 06 01 32 78 78 78  78 78 49 44 43 4f 44 45  |....2xxxxxIDCODE|
+0025c070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+0025c080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+0025c090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+0025c0c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+0025c0d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+0025c0e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+00263070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+00263080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+00263090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+002630c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+002630d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+002630e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+0026a070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+0026a080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+0026a090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+0026a0c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+0026a0d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+0026a0e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+00271080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+00271090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+002710c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+002710d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+002710e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+00279090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+002790c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+002790d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+002790e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+00281090  68 00 06 01 37 78 78 78  78 78 49 44 43 4f 44 45  |h...7xxxxxIDCODE|
+002810c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+002810d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+002810e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+002890c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+002890d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+002890e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+002910c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+002910d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+002910e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+002990d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+002990e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+002a10e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+00ed8030  14 00 0c 01 31 4e 49 44  43 4f 44 45 2e 54 58 54  |....1NIDCODE.TXT|
+00ed8040  04 c0 00 00 14 00 0c 01  32 4e 49 44 43 4f 44 45  |........2NIDCODE|
+00ed8070  34 4e 49 44 43 4f 44 45  2e 54 58 54 07 c0 00 00  |4NIDCODE.TXT....|
+00ed8080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+00ed8090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+00ed80c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00ed80d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00edf030  32 78 78 78 78 78 49 44  43 4f 44 45 2e 54 58 54  |2xxxxxIDCODE.TXT|
+00edf040  04 c0 00 00 14 00 0c 01  32 4e 49 44 43 4f 44 45  |........2NIDCODE|
+00edf070  34 4e 49 44 43 4f 44 45  2e 54 58 54 07 c0 00 00  |4NIDCODE.TXT....|
+00edf080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+00edf090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+00edf0c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00edf0d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00ee6040  33 78 78 78 78 78 0c 01  32 4e 49 44 43 4f 44 45  |3xxxxx..2NIDCODE|
+00ee6070  34 4e 49 44 43 4f 44 45  2e 54 58 54 07 c0 00 00  |4NIDCODE.TXT....|
+00ee6080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+00ee6090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+00ee60c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00ee60d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00eed070  34 4e 49 44 43 4f 44 45  2e 54 58 54 07 c0 00 00  |4NIDCODE.TXT....|
+00eed080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+00eed090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+00eed0c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00eed0d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00ef4070  34 4e 49 44 43 4f 44 45  2e 54 58 54 07 c0 00 00  |4NIDCODE.TXT....|
+00ef4080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+00ef4090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+00ef40c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00ef40d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00efb080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+00efb090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+00efb0c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00efb0d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00f02080  37 78 78 78 78 78 49 44  43 4f 44 45 2e 54 58 54  |7xxxxxIDCODE.TXT|
+00f02090  08 c0 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+00f020c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00f020d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00f09090  38 78 78 78 78 78 0c 01  36 4e 49 44 43 4f 44 45  |8xxxxx..6NIDCODE|
+00f090c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00f090d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00f100c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00f100d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00f170c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 0b c0 00 00  |8NIDCODE.TXT....|
+00f170d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+00f1e0d0  34 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |4...9NIDCODE.TXT|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,523169 s, 2,1 GB/s
+[.] create ext4 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 1065bf55-c4fb-4e41-8c28-3f0a099101ad
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.	      1NIDCODE.TXT  4NIDCODE.TXT  7NIDCODE.TXT	lost+found
+..	      2NIDCODE.TXT  5NIDCODE.TXT  8NIDCODE.TXT	SUB
+0NIDCODE.TXT  3NIDCODE.TXT  6NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  lost+found  SUB
+
+/tmp/testfs/lost+found:
+.  ..
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.29 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.29 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume!
+[ ] test case '00_test_same_directory.sh' with file system 'ext4' fail
+20005040  0d 00 00 00 14 00 0c 01  31 4e 49 44 43 4f 44 45  |........1NIDCODE|
+20005070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+20005080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+20005090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+200050c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+200050d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+200050e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+2000c020  30 4e 49 44 43 4f 44 45  2e 54 58 54 17 00 00 00  |0NIDCODE.TXT....|
+2000c030  14 00 0c 01 31 4e 49 44  43 4f 44 45 2e 54 58 54  |....1NIDCODE.TXT|
+2000c040  18 00 00 00 14 00 0c 01  32 4e 49 44 43 4f 44 45  |........2NIDCODE|
+2000c070  34 4e 49 44 43 4f 44 45  2e 54 58 54 1b 00 00 00  |4NIDCODE.TXT....|
+2000c080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+2000c090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+2000c0c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+2000c0d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20012040  b8 00 06 01 32 78 78 78  78 78 49 44 43 4f 44 45  |....2xxxxxIDCODE|
+20012070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+20012080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+20012090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+200120c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+200120d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+200120e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+20019070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+20019080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+20019090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+200190c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+200190d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+200190e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+20020070  33 4e 49 44 43 4f 44 45  2e 54 58 54 10 00 00 00  |3NIDCODE.TXT....|
+20020080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+20020090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+200200c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+200200d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+200200e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+20027080  14 00 0c 01 34 4e 49 44  43 4f 44 45 2e 54 58 54  |....4NIDCODE.TXT|
+20027090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+200270c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+200270d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+200270e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+2002f090  11 00 00 00 14 00 0c 01  35 4e 49 44 43 4f 44 45  |........5NIDCODE|
+2002f0c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+2002f0d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+2002f0e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+20037090  68 00 06 01 37 78 78 78  78 78 49 44 43 4f 44 45  |h...7xxxxxIDCODE|
+200370c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+200370d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+200370e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+2003f0c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+2003f0d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+2003f0e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+200470c0  37 4e 49 44 43 4f 44 45  2e 54 58 54 14 00 00 00  |7NIDCODE.TXT....|
+200470d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+200470e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+2004f0d0  14 00 0c 01 38 4e 49 44  43 4f 44 45 2e 54 58 54  |....8NIDCODE.TXT|
+2004f0e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+200570e0  15 00 00 00 14 00 0c 01  39 4e 49 44 43 4f 44 45  |........9NIDCODE|
+20c89030  14 00 0c 01 31 4e 49 44  43 4f 44 45 2e 54 58 54  |....1NIDCODE.TXT|
+20c89040  18 00 00 00 14 00 0c 01  32 4e 49 44 43 4f 44 45  |........2NIDCODE|
+20c89070  34 4e 49 44 43 4f 44 45  2e 54 58 54 1b 00 00 00  |4NIDCODE.TXT....|
+20c89080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+20c89090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+20c890c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20c890d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20c91030  32 78 78 78 78 78 49 44  43 4f 44 45 2e 54 58 54  |2xxxxxIDCODE.TXT|
+20c91040  18 00 00 00 14 00 0c 01  32 4e 49 44 43 4f 44 45  |........2NIDCODE|
+20c91070  34 4e 49 44 43 4f 44 45  2e 54 58 54 1b 00 00 00  |4NIDCODE.TXT....|
+20c91080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+20c91090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+20c910c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20c910d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20c99040  33 78 78 78 78 78 0c 01  32 4e 49 44 43 4f 44 45  |3xxxxx..2NIDCODE|
+20c99070  34 4e 49 44 43 4f 44 45  2e 54 58 54 1b 00 00 00  |4NIDCODE.TXT....|
+20c99080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+20c99090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+20c990c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20c990d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20ca1070  34 4e 49 44 43 4f 44 45  2e 54 58 54 1b 00 00 00  |4NIDCODE.TXT....|
+20ca1080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+20ca1090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+20ca10c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20ca10d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20ca9070  34 4e 49 44 43 4f 44 45  2e 54 58 54 1b 00 00 00  |4NIDCODE.TXT....|
+20ca9080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+20ca9090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+20ca90c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20ca90d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20cb1080  14 00 0c 01 35 4e 49 44  43 4f 44 45 2e 54 58 54  |....5NIDCODE.TXT|
+20cb1090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+20cb10c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20cb10d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20cb9080  37 78 78 78 78 78 49 44  43 4f 44 45 2e 54 58 54  |7xxxxxIDCODE.TXT|
+20cb9090  1c 00 00 00 14 00 0c 01  36 4e 49 44 43 4f 44 45  |........6NIDCODE|
+20cb90c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20cb90d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20cc1090  38 78 78 78 78 78 0c 01  36 4e 49 44 43 4f 44 45  |8xxxxx..6NIDCODE|
+20cc10c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20cc10d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20cc90c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20cc90d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20cd10c0  38 4e 49 44 43 4f 44 45  2e 54 58 54 1f 00 00 00  |8NIDCODE.TXT....|
+20cd10d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+20cd90d0  28 0f 0c 01 39 4e 49 44  43 4f 44 45 2e 54 58 54  |(...9NIDCODE.TXT|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,534531 s, 2,0 GB/s
+[.] create f2fs file system and mount
+
+	F2FS-tools: mkfs.f2fs Ver: 1.11.0 (2018-07-10)
+
+Info: Disable heap-based policy
+Info: Debug level = 0
+Info: Label = 
+Info: Trim is enabled
+Info: Segments per section = 1
+Info: Sections per zone = 1
+Info: sector size = 512
+Info: total sectors = 2097152 (1024 MB)
+Info: zone aligned segment0 blkaddr: 512
+Info: format version with
+  "Linux version 5.0.0-31-generic (buildd@lgw01-amd64-046) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #33~18.04.1-Ubuntu SMP Tue Oct 1 10:20:39 UTC 2019"
+Info: [/tmp/test_volumedata] Discarding device
+Info: Overprovision ratio = 6.360%
+Info: Overprovision segments = 68 (GC reserved = 39)
+Info: format successful
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT  SUB
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  SUB
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.17 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.17 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '00_test_same_directory.sh' with file system 'f2fs' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,523819 s, 2,0 GB/s
+[.] create fat file system and mount
 mkfs.fat 4.1 (2017-01-24)
-[.] Create 10 test files in the root directory
-total 36
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
--rwxr-x---  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
-[.] delete the 10 test files
-total 16
-drwxr-x---  2 root root 16384 Jan  1  1970 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
-[.] run overwrite program with -meta:20 to overwrite 10 entries
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT  SUB
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  SUB
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.4 
+Time: 00:00:00.21 
 Done. 
-[.] unmount the test file system
-[.] check the metadata
-[O] test case passed. No file name rest found
-[.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,0014837 s, 2,8 GB/s
-[.] Create ext2 file system and mount
-Filesystem features:      ext_attr resize_inode dir_index filetype sparse_super large_file
-[.] Create 10 test files in the root directory
-total 23
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
-[.] delete the 10 test files
-total 13
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
-[.] run overwrite program with -meta:20 to overwrite 10 entries
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.3 
+Time: 00:00:00.23 
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '00_test_same_directory.sh' with file system 'fat' passed
 [.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,0028799 s, 1,5 GB/s
-[.] Create ext4 file system and mount
-Filesystem features:      ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
-[.] Create 10 test files in the root directory
-total 23
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI10.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI1.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI2.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI3.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI4.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI5.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI6.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI7.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI8.txt
--rw-r-----  1 root root     8 Nov 18 19:22 FRGNTHI9.txt
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
-[.] delete the 10 test files
-total 13
-drwxr-xr-x  3 root root  1024 Nov 18 19:22 .
-drwxrwxrwt 14 root root   360 Nov 18 19:22 ..
-drwx------  2 root root 12288 Nov 18 19:22 lost+found
-[.] run overwrite program with -meta:20 to overwrite 10 entries
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-
-Time: 00:00:00.2 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[O] test case passed. No file name rest found
-[.] clean up
-[.] Create a small test drive
-4+0 records in
-4+0 records out
-4194304 bytes (4,2 MB, 4,0 MiB) copied, 0,00149777 s, 2,8 GB/s
-[.] Create ntfs file system and mount
-/tmp/RAWdata is not a block device.
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,548299 s, 2,0 GB/s
+[.] create ntfs file system and mount
+/tmp/test_volumedata is not a block device.
 mkntfs forced anyway.
-The sector size was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 512 bytes.
-The partition start sector was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
-The number of sectors per track was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
-The number of heads was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The sector size was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 512 bytes.
+The partition start sector was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of sectors per track was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of heads was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
 To boot from a device, Windows needs the 'partition start sector', the 'sectors per track' and the 'number of heads' to be set.
 Windows will not be able to boot from this device.
-[.] Create 10 test files in the root directory
-total 9
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI10.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI1.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI2.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI3.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI4.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI5.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI6.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI7.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI8.txt
--rwxrwxrwx  1 root root    8 Nov 18 19:22 FRGNTHI9.txt
-[.] delete the 10 test files
-total 4
-drwxrwxrwx  1 root root 4096 Nov 18 19:22 .
-drwxrwxrwt 14 root root  360 Nov 18 19:22 ..
-[.] run overwrite program with -meta:20 to overwrite 10 entries
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT  SUB
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  SUB
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
 
-Time: 00:00:00.4 
+Time: 00:00:00.20 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.15 
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '00_test_same_directory.sh' with file system 'ntfs' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,548642 s, 2,0 GB/s
+[.] create xfs file system and mount
+meta-data=/tmp/test_volumedata   isize=512    agcount=4, agsize=65536 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=0, rmapbt=0, reflink=0
+data     =                       bsize=4096   blocks=262144, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[.] create 10 test files in the root directory
+[.] create 10 test files in a sub directory
+/tmp/testfs:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT  SUB
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+
+/tmp/testfs/SUB:
+.   0NIDCODE.TXT  2NIDCODE.TXT	4NIDCODE.TXT  6NIDCODE.TXT  8NIDCODE.TXT
+..  1NIDCODE.TXT  3NIDCODE.TXT	5NIDCODE.TXT  7NIDCODE.TXT  9NIDCODE.TXT
+[.] delete the test files
+/tmp/testfs:
+.  ..  SUB
+
+/tmp/testfs/SUB:
+.  ..
+[.] run overwrite program with -meta:100 to overwrite 10 entries
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.19 
+Done. 
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.16 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume!
+[ ] test case '00_test_same_directory.sh' with file system 'xfs' fail
+20005960  78 31 4e 49 44 43 4f 44  45 2e 54 58 54 01 00 00  |x1NIDCODE.TXT...|
+20005970  00 64 0c 00 90 32 4e 49  44 43 4f 44 45 2e 54 58  |.d...2NIDCODE.TX|
+200059b0  d8 35 4e 49 44 43 4f 44  45 2e 54 58 54 01 00 00  |.5NIDCODE.TXT...|
+200059c0  00 68 0c 00 f0 36 4e 49  44 43 4f 44 45 2e 54 58  |.h...6NIDCODE.TX|
+20005b30  00 60 0c 00 60 30 4e 49  44 43 4f 44 45 2e 54 58  |.`..`0NIDCODE.TX|
+20005b70  a8 33 4e 49 44 43 4f 44  45 2e 54 58 54 01 00 00  |.3NIDCODE.TXT...|
+20005b80  00 71 0c 00 c0 34 4e 49  44 43 4f 44 45 2e 54 58  |.q...4NIDCODE.TX|
+20005bc0  08 37 4e 49 44 43 4f 44  45 2e 54 58 54 01 00 00  |.7NIDCODE.TXT...|
+20005bd0  00 75 0c 01 20 38 4e 49  44 43 4f 44 45 2e 54 58  |.u.. 8NIDCODE.TX|
 [.] clean up

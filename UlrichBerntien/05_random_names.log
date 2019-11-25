@@ -1,74 +1,16 @@
 [.] overwrite version
-Overwrite Version 1.5.2 2019-11-16
-[.] Create a small test drive
+Overwrite Version 1.6.1 2019-11-21
+[.] create empty test volume
 1+0 records in
 1+0 records out
-1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,52332 s, 2,1 GB/s
-[.] Create fat file system and mount
-mkfs.fat 4.1 (2017-01-24)
-[.] Create test directory
-[.] Create test files
-0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
-0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
-0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
-0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
-0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
-1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
-1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
-205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
-24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
-3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
-40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
-47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
-4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
-58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
-66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
-6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
-74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
-7GegdKJxKx  aS43k6KnOk	EhYMA4RKpX  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
-[.] Delete some test files
-[.] directory content after delete
-0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
-0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
-0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
-0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
-0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
-1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
-1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
-205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
-24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
-3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
-40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
-4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
-58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
-66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
-6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
-74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
-7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
-[.] run overwrite -meta:9999 -data:all -path:/tmp/testfs/DIR1
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-Writing data: 
-1Gb 100% 
-
-Time: 00:01:29.202 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[O] test case passed. No file name rest found
-[.] clean up
-[.] Create a small test drive
-1+0 records in
-1+0 records out
-1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,524287 s, 2,0 GB/s
-[.] Create exfat file system and mount
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,527962 s, 2,0 GB/s
+[.] create exfat file system and mount
 mkexfatfs 1.2.8
 Creating... done.
 Flushing... done.
 File system created successfully.
-[.] Create test directory
-[.] Create test files
+[.] create test directory
+[.] create test files
 0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
 0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
 0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
@@ -86,7 +28,7 @@ File system created successfully.
 66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
 6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
 74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
-7GegdKJxKx  aS43k6KnOk	EhYMA4RKpX  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
 [.] Delete some test files
 [.] directory content after delete
 0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
@@ -106,27 +48,331 @@ File system created successfully.
 6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
 74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
 7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
-[.] run overwrite -meta:9999 -data:all -path:/tmp/testfs/DIR1
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-Writing data: 
-1Gb 100% 
 
-Time: 00:00:03.202 
+Time: 00:00:00.15 
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '05_random_names.sh' with file system 'exfat' passed
 [.] clean up
-[.] Create a small test drive
+[.] create empty test volume
 1+0 records in
 1+0 records out
-1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,525602 s, 2,0 GB/s
-[.] Create vfat file system and mount
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,563117 s, 1,9 GB/s
+[.] create ext2 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: de52d3f0-d553-47bc-9479-9bac83c2c265
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create test directory
+[.] create test files
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
+47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
+4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
+58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
+66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
+6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
+74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+[.] Delete some test files
+[.] directory content after delete
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
+4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
+58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
+66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
+6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
+74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.12 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '05_random_names.sh' with file system 'ext2' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,53 s, 2,0 GB/s
+[.] create ext3 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 31ce1b50-d753-4df6-a8cc-31572474a262
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create test directory
+[.] create test files
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
+47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
+4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
+58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
+66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
+6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
+74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+[.] Delete some test files
+[.] directory content after delete
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
+4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
+58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
+66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
+6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
+74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.20 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '05_random_names.sh' with file system 'ext3' fail
+0024f3e0  47 71 5a 74 4d 41 34 52  4b 69 00 00 33 40 00 00  |GqZtMA4RKi..3@..|
+0024f440  14 00 0a 01 45 68 59 70  58 4d 41 34 52 4b 00 00  |....EhYpXMA4RK..|
+0024f530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+0024f570  49 54 48 4d 41 34 52 4b  30 75 00 00 47 40 00 00  |ITHMA4RK0u..G@..|
+002623e0  47 71 5a 74 4d 41 34 52  4b 69 00 00 33 40 00 00  |GqZtMA4RKi..3@..|
+00262440  14 00 0a 01 45 68 59 70  58 4d 41 34 52 4b 00 00  |....EhYpXMA4RK..|
+00262530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+00262570  49 54 48 4d 41 34 52 4b  30 75 00 00 47 40 00 00  |ITHMA4RK0u..G@..|
+0026a440  14 00 0a 01 45 68 59 70  58 4d 41 34 52 4b 00 00  |....EhYpXMA4RK..|
+0026a530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+0026a570  49 54 48 4d 41 34 52 4b  30 75 00 00 47 40 00 00  |ITHMA4RK0u..G@..|
+00272530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+00272570  49 54 48 4d 41 34 52 4b  30 75 00 00 47 40 00 00  |ITHMA4RK0u..G@..|
+0027a570  49 54 48 4d 41 34 52 4b  30 75 00 00 47 40 00 00  |ITHMA4RK0u..G@..|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,522536 s, 2,1 GB/s
+[.] create ext4 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks:   4096/262144             done                            
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 14ea6cca-382c-4b1f-bad5-b02b11e4ea3a
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+[.] create test directory
+[.] create test files
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
+47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
+4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
+58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
+66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
+6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
+74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+[.] Delete some test files
+[.] directory content after delete
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
+4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
+58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
+66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
+6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
+74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.18 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '05_random_names.sh' with file system 'ext4' fail
+200063e0  47 71 5a 74 4d 41 34 52  4b 69 00 00 3e 00 00 00  |GqZtMA4RKi..>...|
+20006440  14 00 0a 01 45 68 59 70  58 4d 41 34 52 4b 00 00  |....EhYpXMA4RK..|
+20006530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+20006570  49 54 48 4d 41 34 52 4b  30 75 00 00 52 00 00 00  |ITHMA4RK0u..R...|
+200193e0  47 71 5a 74 4d 41 34 52  4b 69 00 00 3e 00 00 00  |GqZtMA4RKi..>...|
+20019440  14 00 0a 01 45 68 59 70  58 4d 41 34 52 4b 00 00  |....EhYpXMA4RK..|
+20019530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+20019570  49 54 48 4d 41 34 52 4b  30 75 00 00 52 00 00 00  |ITHMA4RK0u..R...|
+20021440  14 00 0a 01 45 68 59 70  58 4d 41 34 52 4b 00 00  |....EhYpXMA4RK..|
+20021530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+20021570  49 54 48 4d 41 34 52 4b  30 75 00 00 52 00 00 00  |ITHMA4RK0u..R...|
+20029530  14 00 0a 01 34 37 6f 4c  30 4d 41 34 52 4b 00 00  |....47oL0MA4RK..|
+20029570  49 54 48 4d 41 34 52 4b  30 75 00 00 52 00 00 00  |ITHMA4RK0u..R...|
+20031570  49 54 48 4d 41 34 52 4b  30 75 00 00 52 00 00 00  |ITHMA4RK0u..R...|
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,524801 s, 2,0 GB/s
+[.] create f2fs file system and mount
+
+	F2FS-tools: mkfs.f2fs Ver: 1.11.0 (2018-07-10)
+
+Info: Disable heap-based policy
+Info: Debug level = 0
+Info: Label = 
+Info: Trim is enabled
+Info: Segments per section = 1
+Info: Sections per zone = 1
+Info: sector size = 512
+Info: total sectors = 2097152 (1024 MB)
+Info: zone aligned segment0 blkaddr: 512
+Info: format version with
+  "Linux version 5.0.0-31-generic (buildd@lgw01-amd64-046) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #33~18.04.1-Ubuntu SMP Tue Oct 1 10:20:39 UTC 2019"
+Info: [/tmp/test_volumedata] Discarding device
+Info: Overprovision ratio = 6.360%
+Info: Overprovision segments = 68 (GC reserved = 39)
+Info: format successful
+[.] create test directory
+[.] create test files
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
+47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
+4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
+58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
+66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
+6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
+74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+[.] Delete some test files
+[.] directory content after delete
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
+4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
+58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
+66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
+6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
+74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.14 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[.] No file name rest found
+[X] test case '05_random_names.sh' with file system 'f2fs' passed
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,531042 s, 2,0 GB/s
+[.] create fat file system and mount
 mkfs.fat 4.1 (2017-01-24)
-[.] Create test directory
-[.] Create test files
+[.] create test directory
+[.] create test files
 0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
 0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
 0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
@@ -144,7 +390,7 @@ mkfs.fat 4.1 (2017-01-24)
 66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
 6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
 74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
-7GegdKJxKx  aS43k6KnOk	EhYMA4RKpX  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
 [.] Delete some test files
 [.] directory content after delete
 0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
@@ -164,158 +410,33 @@ mkfs.fat 4.1 (2017-01-24)
 6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
 74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
 7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
-[.] run overwrite -meta:9999 -data:all -path:/tmp/testfs/DIR1
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-Writing data: 
-1Gb 100% 
 
-Time: 00:01:28.964 
+Time: 00:00:00.53 
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[O] test case passed. No file name rest found
+[.] No file name rest found
+[X] test case '05_random_names.sh' with file system 'fat' passed
 [.] clean up
-[.] Create a small test drive
+[.] create empty test volume
 1+0 records in
 1+0 records out
-1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,526866 s, 2,0 GB/s
-[.] Create ext2 file system and mount
-Filesystem features:      ext_attr resize_inode dir_index filetype sparse_super large_file
-[.] Create test directory
-[.] Create test files
-0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
-0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
-0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
-0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
-0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
-1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
-1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
-205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
-24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
-3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
-40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
-47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
-4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
-58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
-66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
-6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
-74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
-7GegdKJxKx  aS43k6KnOk	EhYMA4RKpX  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
-[.] Delete some test files
-[.] directory content after delete
-0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
-0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
-0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
-0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
-0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
-1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
-1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
-205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
-24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
-3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
-40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
-4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
-58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
-66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
-6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
-74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
-7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
-[.] run overwrite -meta:9999 -data:all -path:/tmp/testfs/DIR1
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-Writing data: 
-1Gb 100% 
-
-Time: 00:00:02.18 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[X] file name rest found on test drive!
-302023e0  33 78 5a 74 4d 41 34 52  4b 69 00 00 33 c0 00 00  |3xZtMA4RKi..3...|
-30202440  14 00 02 01 34 78 59 4d  41 34 52 4b 70 58 00 00  |....4xYMA4RKpX..|
-30202530  14 00 02 01 35 78 6f 4c  30 4d 41 34 52 4b 00 00  |....5xoL0MA4RK..|
-30202570  36 78 48 4d 41 34 52 4b  30 75 00 00 47 c0 00 00  |6xHMA4RK0u..G...|
-[.] clean up
-[.] Create a small test drive
-1+0 records in
-1+0 records out
-1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,519665 s, 2,1 GB/s
-[.] Create ext4 file system and mount
-Filesystem features:      ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
-[.] Create test directory
-[.] Create test files
-0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
-0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
-0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
-0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
-0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
-1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
-1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
-205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
-24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
-3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
-40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
-47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
-4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
-58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
-66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
-6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
-74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
-7GegdKJxKx  aS43k6KnOk	EhYMA4RKpX  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
-[.] Delete some test files
-[.] directory content after delete
-0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
-0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
-0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
-0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
-0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
-1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
-1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
-205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
-24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
-3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
-40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
-4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
-58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
-66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
-6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
-74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
-7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
-[.] run overwrite -meta:9999 -data:all -path:/tmp/testfs/DIR1
-
-Writing metadata: 
-10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-Writing data: 
-1Gb 100% 
-
-Time: 00:00:01.808 
-Done. 
-[.] unmount the test file system
-[.] check the metadata
-[X] file name rest found on test drive!
-010973e0  33 78 5a 74 4d 41 34 52  4b 69 00 00 3e 00 00 00  |3xZtMA4RKi..>...|
-01097440  14 00 02 01 34 78 59 4d  41 34 52 4b 70 58 00 00  |....4xYMA4RKpX..|
-01097530  14 00 02 01 35 78 6f 4c  30 4d 41 34 52 4b 00 00  |....5xoL0MA4RK..|
-01097570  36 78 48 4d 41 34 52 4b  30 75 00 00 52 00 00 00  |6xHMA4RK0u..R...|
-[.] clean up
-[.] Create a small test drive
-1+0 records in
-1+0 records out
-1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,520237 s, 2,1 GB/s
-[.] Create ntfs file system and mount
-/tmp/RAWdata is not a block device.
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,52761 s, 2,0 GB/s
+[.] create ntfs file system and mount
+/tmp/test_volumedata is not a block device.
 mkntfs forced anyway.
-The sector size was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 512 bytes.
-The partition start sector was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
-The number of sectors per track was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
-The number of heads was not specified for /tmp/RAWdata and it could not be obtained automatically.  It has been set to 0.
+The sector size was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 512 bytes.
+The partition start sector was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of sectors per track was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
+The number of heads was not specified for /tmp/test_volumedata and it could not be obtained automatically.  It has been set to 0.
 To boot from a device, Windows needs the 'partition start sector', the 'sectors per track' and the 'number of heads' to be set.
 Windows will not be able to boot from this device.
-[.] Create test directory
-[.] Create test files
+[.] create test directory
+[.] create test files
 0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
 0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
 0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
@@ -333,7 +454,7 @@ Windows will not be able to boot from this device.
 66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
 6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
 74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
-7GegdKJxKx  aS43k6KnOk	EhYMA4RKpX  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
 [.] Delete some test files
 [.] directory content after delete
 0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
@@ -353,18 +474,154 @@ Windows will not be able to boot from this device.
 6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
 74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
 7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
-[.] run overwrite -meta:9999 -data:all -path:/tmp/testfs/DIR1
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
 
 Writing metadata: 
 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
-Writing data: 
-1Gb 100% 
 
-Time: 00:00:03.533 
+Time: 00:00:00.13 
 Done. 
 [.] unmount the test file system
 [.] check the metadata
-[X] file name rest (2 byte charset) found on test drive!
-EhYMA4RKpX0
+[E] file name rest (2 byte charset) found on test volume
+[ ] test case '05_random_names.sh' with file system 'ntfs' fail
+EhYpXMA4RK0
 GqZtMA4RKi
+[.] clean up
+[.] create empty test volume
+1+0 records in
+1+0 records out
+1073741824 bytes (1,1 GB, 1,0 GiB) copied, 0,522695 s, 2,1 GB/s
+[.] create xfs file system and mount
+meta-data=/tmp/test_volumedata   isize=512    agcount=4, agsize=65536 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=0, rmapbt=0, reflink=0
+data     =                       bsize=4096   blocks=262144, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[.] create test directory
+[.] create test files
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	I866MA4RKA  M3OZjU6HZm	raeTh1ahse  Uw1d2QVhLb
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	IeI6sNkKP8  M4vxzPYnTm	RDFPLjo0Rm  vhKw01jQ4S
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ierah3fohD  M5ZWQ3OEIg	rooG5Quaec  vlEznHk879
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	ieth1kaeF4  Mb4pV2CyAL	RZP2Z9RZKC  VpML5Qtyw6
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IJb7DIm96a  mc76QjKZ7X	s5EMuuXqMV  VQBIy0f9tU
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	IMwKxELn8R  MjBhMA4RKs	sealeiRi2a  VzYSNmSK3k
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	ITHMA4RK0u  MRNIE6TtEE	shohquieW0  wozuZ8heiN
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	j2tXwJU19e  o331MA4RKo	sL9lmrKxgN  wRW08PEt27
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	jieZa7oghu  OFIPWqh438	so68lBokzg  wWW36LOmFk
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GqZtMA4RKi	KAHKy8ZRnZ  ogai6ku5eK	SsOWqpyN5p  x53TBQk6Rf
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GsFtI7Qetl	KgAXv3dvdQ  OhQu6shaez	SUfrot5MnF  xNpoYh41Ek
+47oL0MA4RK  aeBee5begu	eCsViw6QBF  GU6jMIsHDs	kU5tkqjdyw  ohth2yi1Bu	tahpish4Re  yucUYj7V0Z
+4JyDf3TlXp  aeChuph9ei	Eedaz3teo0  gVixG6e6jn	L7pmmakbRZ  ooch6mooYe	TeiKooMei8  yYykZ54tUW
+58JNLBoHv6  AeODb2XVjC	eeGh6eijoh  Ha1OopXUuG	lE9ExUTPXg  p8c4LBRc6D	TJ1eCqdLNI  ZoC1CnJ1u9
+66uZXLwaI1  ahQ2MA4RK9	eeP6ahchei  Hci0j3W79R	li8eiXaeve  pcRRtx9Bua	TwxNw7SSyp
+6nJhAUxcQ5  ahz9Othat8	eev1quoo1O  HieZaihae1	looc2ohN4r  Phae1xiesa	TyzCRI2fhw
+74msnI0ZAt  Aid5ooGh1z	eeW3ein1os  hkb3D2B3K8	lPkg9PorXc  pvyaIxqg2V	UnH48DqsmM
+7GegdKJxKx  aS43k6KnOk	EhYpXMA4RK  hTeoALOr9w	LukM9a3auf  qG97Tku5AK	uokVK5KT0C
+[.] Delete some test files
+[.] directory content after delete
+0BhPNq12Y1  7j9PLugpMH	bk7aO0c0Fb  eip9eez8Re	IeI6sNkKP8  M4vxzPYnTm	rooG5Quaec  vhKw01jQ4S
+0eyVuHnebJ  8tSqzzu6li	cCsNL6JhdB  eipoV7Bo0W	ierah3fohD  M5ZWQ3OEIg	RZP2Z9RZKC  vlEznHk879
+0jrki44dXe  95nWsDoqiB	ceZovie2bu  eiVae0jahd	ieth1kaeF4  Mb4pV2CyAL	s5EMuuXqMV  VpML5Qtyw6
+0PqZPeM7nO  97HrO0ly4Z	chaif3eiCh  En3rgYOAYr	IJb7DIm96a  mc76QjKZ7X	sealeiRi2a  VQBIy0f9tU
+0vvDwdWx9N  9JKtURjBm1	civ1Uiphee  eos0OhRiez	IMwKxELn8R  MRNIE6TtEE	shohquieW0  VzYSNmSK3k
+1FrKaGmkM4  9k4ipu2tZS	DAi3BWcmiL  eph3Phin4i	j2tXwJU19e  OFIPWqh438	sL9lmrKxgN  wozuZ8heiN
+1tJKlTkly0  9Kip7Z7BY7	DaviuQu5ei  FaN3too5su	jieZa7oghu  ogai6ku5eK	so68lBokzg  wRW08PEt27
+205nxSzwQq  A72q8VME1M	dQj57Z0i4F  gD9Z8hIRcf	KAHKy8ZRnZ  OhQu6shaez	SsOWqpyN5p  wWW36LOmFk
+24PyvCG5VS  a9kzdOUOU5	dwwjTyR4ka  glZWG2uOct	KgAXv3dvdQ  ohth2yi1Bu	SUfrot5MnF  x53TBQk6Rf
+3yFlimDRQp  aa3ohyaeWu	DXRJ36wbLM  GsFtI7Qetl	kU5tkqjdyw  ooch6mooYe	tahpish4Re  xNpoYh41Ek
+40AUHIHWtv  aB5xRQJ0xo	dxz8Av0J7j  GU6jMIsHDs	L7pmmakbRZ  p8c4LBRc6D	TeiKooMei8  yucUYj7V0Z
+4JyDf3TlXp  aeBee5begu	eCsViw6QBF  gVixG6e6jn	lE9ExUTPXg  pcRRtx9Bua	TJ1eCqdLNI  yYykZ54tUW
+58JNLBoHv6  aeChuph9ei	Eedaz3teo0  Ha1OopXUuG	li8eiXaeve  Phae1xiesa	TwxNw7SSyp  ZoC1CnJ1u9
+66uZXLwaI1  AeODb2XVjC	eeGh6eijoh  Hci0j3W79R	looc2ohN4r  pvyaIxqg2V	TyzCRI2fhw
+6nJhAUxcQ5  ahz9Othat8	eeP6ahchei  HieZaihae1	lPkg9PorXc  qG97Tku5AK	UnH48DqsmM
+74msnI0ZAt  Aid5ooGh1z	eev1quoo1O  hkb3D2B3K8	LukM9a3auf  raeTh1ahse	uokVK5KT0C
+7GegdKJxKx  aS43k6KnOk	eeW3ein1os  hTeoALOr9w	M3OZjU6HZm  RDFPLjo0Rm	Uw1d2QVhLb
+[.] run overwrite -meta:80 -path:/tmp/testfs/DIR1
+
+Writing metadata: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.22 
+Done. 
+[.] unmount the test file system
+[.] check the metadata
+[E] file name rest found on test volume
+[ ] test case '05_random_names.sh' with file system 'xfs' fail
+2000ff20  00 00 00 8a 0a 4d 6a 42  68 4d 41 34 52 4b 73 01  |.....MjBhMA4RKs.|
+2000ff80  00 00 00 8e 0a 49 38 36  36 4d 41 34 52 4b 41 01  |.....I866MA4RKA.|
+20010010  00 00 00 94 0a 47 71 5a  74 4d 41 34 52 4b 69 01  |.....GqZtMA4RKi.|
+20010090  70 58 4d 41 34 52 4b 01  00 00 05 58 00 00 00 00  |pXMA4RK....X....|
+200101b0  4c 30 4d 41 34 52 4b 01  00 00 06 78 00 00 00 00  |L0MA4RK....x....|
+200101f0  00 00 00 a8 0a 49 54 48  4d 41 34 52 4b 30 75 01  |.....ITHMA4RK0u.|
+20010580  00 00 00 ce 0a 6f 33 33  31 4d 41 34 52 4b 6f 01  |.....o331MA4RKo.|
+20010700  00 00 00 de 0a 61 68 51  32 4d 41 34 52 4b 39 01  |.....ahQ2MA4RK9.|
+20012130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20012250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20014130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20014250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20016130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20016250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20018130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20018250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2001a130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2001a250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2001c130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2001c250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2001e130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2001e250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20020130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20020250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20022130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20022250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20024130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20024250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20026130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20026250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20028130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20028250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2002a130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2002a250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2002c130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2002c250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2002e130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2002e250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20030130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20030250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+20032130  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+20032250  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200341b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200342d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200361b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200362d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200381b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200382d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2003a1b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2003a2d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2003c1b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2003c2d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2003e1b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2003e2d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200401b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200402d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200421b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200422d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200441b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200442d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200461b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200462d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200481b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200482d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2004a2d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200541b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200553b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+200565b0  0a 45 68 59 70 58 4d 41  34 52 4b 01 00 00 05 58  |.EhYpXMA4RK....X|
+2005d4d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2005e8d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+2005fcd0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
+200610d0  0a 34 37 6f 4c 30 4d 41  34 52 4b 01 00 00 06 78  |.47oL0MA4RK....x|
 [.] clean up
