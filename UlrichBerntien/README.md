@@ -27,16 +27,16 @@ in the directory 'SUB'. (The overwrite programm is called twice.)
 
 The test is executed with different file systems.
 
-Test results:
+Test results of Overwrite Version 1.6.1 2019-11-21:
 
-[X] test case '00_test_same_directory.sh' with file system 'exfat' passed
-[X] test case '00_test_same_directory.sh' with file system 'ext2' passed
-[ ] test case '00_test_same_directory.sh' with file system 'ext3' fail
-[ ] test case '00_test_same_directory.sh' with file system 'ext4' fail
-[X] test case '00_test_same_directory.sh' with file system 'f2fs' passed
-[X] test case '00_test_same_directory.sh' with file system 'fat' passed
-[X] test case '00_test_same_directory.sh' with file system 'ntfs' passed
-[ ] test case '00_test_same_directory.sh' with file system 'xfs' fail
+* [X] test case '00_test_same_directory.sh' with file system 'exfat' passed
+* [X] test case '00_test_same_directory.sh' with file system 'ext2' passed
+* [ ] test case '00_test_same_directory.sh' with file system 'ext3' fail
+* [ ] test case '00_test_same_directory.sh' with file system 'ext4' fail
+* [X] test case '00_test_same_directory.sh' with file system 'f2fs' passed
+* [X] test case '00_test_same_directory.sh' with file system 'fat' passed
+* [X] test case '00_test_same_directory.sh' with file system 'ntfs' passed
+* [ ] test case '00_test_same_directory.sh' with file system 'xfs' fail
 
 
 **01_test_short_names**
@@ -46,16 +46,16 @@ Test files are created in the root directory and in a directoty SUB.
 The overwrite programm should overwrite the meta data of the 1st test file.
 The overwrite programm is called for both directories.
 
-Test results:
+Test results of Overwrite Version 1.6.1 2019-11-21:
 
-[X] test case '01_test_short_names.sh' with file system 'exfat' passed
-[X] test case '01_test_short_names.sh' with file system 'ext2' passed
-[ ] test case '01_test_short_names.sh' with file system 'ext3' fail
-[ ] test case '01_test_short_names.sh' with file system 'ext4' fail
-[X] test case '01_test_short_names.sh' with file system 'f2fs' passed
-[X] test case '01_test_short_names.sh' with file system 'fat' passed
-[X] test case '01_test_short_names.sh' with file system 'ntfs' passed
-[X] test case '01_test_short_names.sh' with file system 'xfs' passed
+* [X] test case '01_test_short_names.sh' with file system 'exfat' passed
+* [X] test case '01_test_short_names.sh' with file system 'ext2' passed
+* [ ] test case '01_test_short_names.sh' with file system 'ext3' fail
+* [ ] test case '01_test_short_names.sh' with file system 'ext4' fail
+* [X] test case '01_test_short_names.sh' with file system 'f2fs' passed
+* [X] test case '01_test_short_names.sh' with file system 'fat' passed
+* [X] test case '01_test_short_names.sh' with file system 'ntfs' passed
+* [X] test case '01_test_short_names.sh' with file system 'xfs' passed
 
 
 **02_test_overflow**
@@ -63,9 +63,9 @@ Test results:
 The test script calls the overwrite program with a too long path name.
 The overwrite program has to respond with an error message.
 
-Test results:
+Test results of Overwrite Version 1.6.1 2019-11-21:
 
-[X] test case '02_test_overflow.sh' passed
+* [X] test case '02_test_overflow.sh' passed
 
 
 **03_test_unix_names**
@@ -79,14 +79,14 @@ Newer versions handles path names with ':' and '/' at the end.
 Overwrite passes the test if absolute path names are used to prevent
 a path name starting with a space.
 
-Test results:
+Test results of Overwrite Version 1.6.1 2019-11-21:
 
-[X] test case '03_test_unix_names.sh' with file system 'ext2' passed
-[ ] test case '03_test_unix_names.sh' with file system 'ext3' fail
-[ ] test case '03_test_unix_names.sh' with file system 'ext4' fail
-[X] test case '03_test_unix_names.sh' with file system 'f2fs' passed
-[X] test case '03_test_unix_names.sh' with file system 'ntfs' passed
-[ ] test case '03_test_unix_names.sh' with file system 'xfs' fail
+* [X] test case '03_test_unix_names.sh' with file system 'ext2' passed
+* [ ] test case '03_test_unix_names.sh' with file system 'ext3' fail
+* [ ] test case '03_test_unix_names.sh' with file system 'ext4' fail
+* [X] test case '03_test_unix_names.sh' with file system 'f2fs' passed
+* [X] test case '03_test_unix_names.sh' with file system 'ntfs' passed
+* [ ] test case '03_test_unix_names.sh' with file system 'xfs' fail
 
 
 **04_ext4_file_names**
@@ -94,16 +94,16 @@ Test results:
 The test uses an ext4 file system with out journal on a small volume.
 The test creates 9 file, removes the files and calls overwrite.
 
-Test results:
+Test results of Overwrite Version 1.6.1 2019-11-21:
 
-[X] test case '04_ext4_file_names.sh' with file system 'exfat' passed
-[X] test case '04_ext4_file_names.sh' with file system 'ext2' passed
-[ ] test case '04_ext4_file_names.sh' with file system 'ext3' fail
-[ ] test case '04_ext4_file_names.sh' with file system 'ext4' fail
-[ ] test case '04_ext4_file_names.sh' with file system 'f2fs' fail
-[X] test case '04_ext4_file_names.sh' with file system 'fat' passed
-[X] test case '04_ext4_file_names.sh' with file system 'ntfs' passed
-[X] test case '04_ext4_file_names.sh' with file system 'xfs' passed
+* [X] test case '04_ext4_file_names.sh' with file system 'exfat' passed
+* [X] test case '04_ext4_file_names.sh' with file system 'ext2' passed
+* [ ] test case '04_ext4_file_names.sh' with file system 'ext3' fail
+* [ ] test case '04_ext4_file_names.sh' with file system 'ext4' fail
+* [ ] test case '04_ext4_file_names.sh' with file system 'f2fs' fail
+* [X] test case '04_ext4_file_names.sh' with file system 'fat' passed
+* [X] test case '04_ext4_file_names.sh' with file system 'ntfs' passed
+* [X] test case '04_ext4_file_names.sh' with file system 'xfs' passed
 
 
 **05_random_names**
@@ -116,14 +116,14 @@ with a string 'MA4RK' inside the 10 character long file name.
 
 Test summary of Overwrite Version 1.6.1 2019-11-21:
 
-[X] test case '05_random_names.sh' with file system 'exfat' passed
-[X] test case '05_random_names.sh' with file system 'ext2' passed
-[ ] test case '05_random_names.sh' with file system 'ext3' fail
-[ ] test case '05_random_names.sh' with file system 'ext4' fail
-[X] test case '05_random_names.sh' with file system 'f2fs' passed
-[X] test case '05_random_names.sh' with file system 'fat' passed
-[ ] test case '05_random_names.sh' with file system 'ntfs' fail
-[ ] test case '05_random_names.sh' with file system 'xfs' fail
+* [X] test case '05_random_names.sh' with file system 'exfat' passed
+* [X] test case '05_random_names.sh' with file system 'ext2' passed
+* [ ] test case '05_random_names.sh' with file system 'ext3' fail
+* [ ] test case '05_random_names.sh' with file system 'ext4' fail
+* [X] test case '05_random_names.sh' with file system 'f2fs' passed
+* [X] test case '05_random_names.sh' with file system 'fat' passed
+* [ ] test case '05_random_names.sh' with file system 'ntfs' fail
+* [ ] test case '05_random_names.sh' with file system 'xfs' fail
 
 
 ## Support files
