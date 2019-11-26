@@ -5,12 +5,10 @@ Experiments with the overwrite program.
 ## The overwrite program
 
 The overwrite program is an open source program from [Ivo Gjorgjievski](https://github.com/ivoprogram).
-
-The overwrite program is published on the [web page](https://ivoprogram.github.io/content/en/index.html).
-The program description is published in the [web page](https://ivoprogram.github.io/content/en/index.html).
+The overwrite program [documentation](https://ivoprogram.github.io/content/en/overwrite.html) is stored on github.
 > Overwrite is a program that overwrites empty space on disk, metadata and data.
 
-Overwrite is a written in standard C. The source code is published on a [github repository](https://github.com/ivoprogram/overwrite)
+Overwrite is a written in standard C. The source code is published on a [github repository](https://github.com/ivoprogram/overwrite).
 
 ## Tests
 
@@ -23,7 +21,7 @@ The files ".log" are output of the script files.
 The test script create 10 test files in the root directory and a 10 test files in a directory 'SUB'.
 The test files are deleted.
 The overwrite program is called to overwrite the meta data in the root directory and
-in the directory 'SUB'. (The overwrite programm is called twice.)
+in the directory 'SUB'. (The overwrite program is called twice.)
 
 The test is executed with different file systems.
 
@@ -43,8 +41,8 @@ Test results of Overwrite Version 1.6.1 2019-11-21:
 
 The test script creates 2 test files with short names and deletes the 2nd test file.
 Test files are created in the root directory and in a directoty SUB.
-The overwrite programm should overwrite the meta data of the 1st test file.
-The overwrite programm is called for both directories.
+The overwrite program should overwrite the meta data of the 1st test file.
+The overwrite program is called for both directories.
 
 Test results of Overwrite Version 1.6.1 2019-11-21:
 
